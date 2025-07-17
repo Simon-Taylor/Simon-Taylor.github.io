@@ -7,84 +7,7 @@
     <meta name="description" content="Insights and articles from SJT Digital.">
     <meta name="author" content="Simon Taylor">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #2f3336;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #4b5563;
-        }
-        .container {
-            max-width: 56rem;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
-        .blog-list {
-            margin-top: 2rem;
-        }
-        .blog-post {
-            background: #1f2224;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .blog-post h2 {
-            margin-top: 0;
-            font-size: 1.75rem;
-        }
-        .blog-post h3 {
-            margin-top: 2rem;
-            font-size: 1.25rem;
-        }
-        .blog-post ul, .blog-post ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .blog-post li {
-            margin-bottom: 0.5rem;
-        }
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        nav {
-            margin-bottom: 2rem;
-        }
-        nav a {
-            color: white;
-            margin-right: 1.5rem;
-            font-size: 1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #6b7280;
-            border-top: 1px solid #4b5563;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #4b5563;
-            margin: 2rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
@@ -101,13 +24,14 @@
     <main class="container blog-list">
         <div class="blog-post">
             <h2>Kiro: Amazon’s Quietly Brilliant Entry into AI-Assisted Coding</h2>
-            <p>As someone who regularly experiments with new AI tooling, I was curious to see how Kiro compares to more established options. I’d been a long-time Cursor user-drawn to its deeper AI integration and workflow support-but recent pricing changes made me reconsider. With Cursor now in murky territory on cost and transparency, I was open to alternatives.</p>
-            <p>Kiro had just launched, it was free to use during preview, and it promised a more structured, spec-driven development experience powered by Claude Sonnet 4.0 / 3.7. That was more than enough reason to take it for a spin.</p>
+            <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon Taylor &middot; Published 2024-06-09</p>
+            <p>As someone who regularly experiments with new AI tooling, I was curious to see how Kiro compares to more established options. I’d been a long-time Cursor user - drawn to its deeper AI integration and workflow support - but recent pricing changes made me reconsider. With Cursor now in murky territory on cost and transparency, I was open to alternatives.</p>
+            <p>Kiro had just launched, it was free to use during preview, and it promised a more structured, spec - driven development experience powered by Claude Sonnet 4.0 / 3.7. That was more than enough reason to take it for a spin.</p>
             <p>I’ve been using Kiro for a couple of days now, and I’ve got thoughts. If you’re curious about what it is, how it works, and whether it’s worth your time, read on.</p>
             <hr>
             <h3>Why I Tried Kiro: A Cursor Survivor’s Tale</h3>
-            <p>My own AI coding journey started with VS Code and GitHub Copilot. It felt like magic-until it wasn’t. Cursor came next, with its deeper integration of AI and more intelligent workflows. For a while, Cursor became my go-to.</p>
-            <p>Then came the pricing saga. If you missed it, Cursor recently changed their pricing model (again), resulting in some eye-watering bills and a fair bit of confusion. Like many others, I cancelled my subscription. Suddenly tool-less and curious, I stumbled on Kiro-just launched, free to use during preview, and promising a structured coding experience.</p>
+            <p>My own AI coding journey started with VS Code and GitHub Copilot. It felt like magic - until it wasn’t. Cursor came next, with its deeper integration of AI and more intelligent workflows. For a while, Cursor became my go - to.</p>
+            <p>Then came the pricing saga. If you missed it, Cursor recently changed their pricing model (again), resulting in some eye - watering bills and a fair bit of confusion. Like many others, I cancelled my subscription. Suddenly tool - less and curious, I stumbled on Kiro - just launched, free to use during preview, and promising a structured coding experience.</p>
             <p>That sounded like a perfect excuse to try something new, learn a few things, and put Kiro through its paces.</p>
             <hr>
             <h3>What Is Kiro?</h3>
@@ -123,9 +47,9 @@
             <p>When you first launch Kiro, you’re given a choice between two modes: Vibe Coding and Spec Mode.</p>
             <ul>
                 <li>Vibe Coding is like what you get with Cursor or Copilot Chat. You talk to the AI, it responds, you build as you go.</li>
-                <li>Spec Mode is the star of the show. It structures your build around well-defined planning steps.</li>
+                <li>Spec Mode is the star of the show. It structures your build around well - defined planning steps.</li>
             </ul>
-            <p>I picked Spec Mode to test a project I’d been meaning to build anyway: a multi-agent trading system using the Model Context Protocol (MCP). I wanted to see if Kiro could help me go from idea to functional scaffold more cleanly than my usual haphazard process.</p>
+            <p>I picked Spec Mode to test a project I’d been meaning to build anyway: a multi - agent trading system using the Model Context Protocol (MCP). I wanted to see if Kiro could help me go from idea to functional scaffold more cleanly than my usual haphazard process.</p>
             <p><strong>Spoiler: it did.</strong></p>
             <img src="assets/let's build.jpg" alt="Kiro Spec Mode selection screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
             <hr>
@@ -163,7 +87,7 @@
                 <li>Implement data fetchers</li>
                 <li>Write agent orchestration logic</li>
             </ul>
-            <p>Each task came with sub-tasks and guidance. As I worked through them, I could mark them complete, which gave a sense of momentum. The interface is clean and motivating-more than I expected, actually. At times it felt like pairing with a senior engineer who’d already done the hard thinking.</p>
+            <p>Each task came with sub-tasks and guidance. As I worked through them, I could mark them complete, which gave a sense of momentum. The interface is clean and motivating - more than I expected, actually. At times it felt like pairing with a senior engineer who’d already done the hard thinking.</p>
             <img src="assets/task list.jpg" alt="Kiro task list screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
             <p>Behind the scenes, Kiro uses Claude Sonnet 4.0 / 3.7 for all generation. There’s no model choice (yet), but Claude performed well throughout.</p>
             <hr>
