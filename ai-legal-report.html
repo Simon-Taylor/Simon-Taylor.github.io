@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,6 +75,7 @@
 
                     <div style="text-align: center; margin: 3rem 0;">
                         <a href="assets/Private AI for Law Firms - Market Research 2025.pdf" target="_blank"
+                            onclick="gtag('event', 'file_download', { 'file_name': 'Private AI for Law Firms - Market Research 2025.pdf', 'file_extension': 'pdf' });"
                             style="display: inline-block; background: #007acc; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background-color 0.2s;">
                             Download Report (PDF)
                         </a>
@@ -81,7 +90,7 @@
                             that enhance productivity while maintaining client confidentiality.
                         </p>
                         <p style="margin-bottom: 0;">
-                            <a href="/#contact" style="color: #007acc;">Get in touch</a> to discuss your specific
+                            <a href="/#contact" onclick="gtag('event', 'click', { 'link_text': 'Get in touch' });" style="color: #007acc;">Get in touch</a> to discuss your specific
                             requirements.
                         </p>
                     </div>

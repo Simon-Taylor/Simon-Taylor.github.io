@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +104,7 @@
                 <h3>Contact</h3>
                 <p class="text-gray mb-2">Interested in working together? Let's talk.</p>
                 <p class="text-gray">Phone: <a href="tel:07972377139" class="underline">07972 377139</a></p>
-                <p class="text-gray">Email: <a href="mailto:info@sjtdigital.com">info@sjtdigital.com</a></p>
+                <p class="text-gray">Email: <a href="mailto:info@sjtdigital.com" onclick="gtag('event', 'contact', { 'method': 'email' });">info@sjtdigital.com</a></p>
             </div>
         </section>
     </main>
