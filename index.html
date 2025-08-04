@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GJ8NNXBM1Z');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
     </script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SJT Digital | Operational Efficiency & AI Consulting</title>
-    <meta name="description" content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
-    <meta name="keywords" content="consultancy, AI consulting, operational efficiency, profit improvement, self-hosted AI, SJT Digital">
+    <meta name="description"
+        content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
+    <meta name="keywords"
+        content="consultancy, AI consulting, operational efficiency, profit improvement, self-hosted AI, SJT Digital">
     <meta name="author" content="Simon Taylor">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sjtdigital.com">
     <meta property="og:title" content="SJT Digital | Operational Efficiency & AI Consulting">
-    <meta property="og:description" content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
+    <meta property="og:description"
+        content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
     <meta property="og:image" content="/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sjtdigital.com">
     <meta property="twitter:title" content="SJT Digital | Operational Efficiency & AI Consulting">
-    <meta property="twitter:description" content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
+    <meta property="twitter:description"
+        content="Helping small and mid-sized organisations improve profitability through operational efficiency, modernisation, and smart use of AI.">
     <meta property="twitter:image" content="/og-image.jpg">
 
     <!-- JSON-LD Structured Data -->
@@ -54,7 +59,23 @@
     }
     </script>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-carousel {
+            width: 200%;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -62,7 +83,7 @@
             <nav aria-label="Main navigation">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="contact.html">Contact</a>
                 <a href="blog.html">Blog</a>
             </nav>
         </div>
@@ -72,16 +93,22 @@
         <section class="hero">
             <h2>Experienced. Commercial. AI-ready.</h2>
             <p class="text-gray">
-                I help ambitious businesses unlock performance and profitability through practical technology leadership, shaped by experience across dozens of organisations. Whether it’s AI or operational clarity, I focus on what actually moves the needle.
+                I help ambitious businesses unlock performance and profitability through practical technology
+                leadership, shaped by experience across dozens of organisations. Whether it’s AI or operational clarity,
+                I focus on what actually moves the needle.
             </p>
         </section>
 
         <section id="about" class="dark-bg">
             <div class="container content" style="text-align: center;">
-                <img src="profile-pic-320.jpg" alt="Simon Taylor - Founder of SJT Digital" style="width: 160px; height: 160px; object-fit: cover; object-position: top; border-radius: 50%; margin-bottom: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 4px solid #2f3336;" />
+                <img src="profile-pic-320.jpg" alt="Simon Taylor - Founder of SJT Digital"
+                    style="width: 160px; height: 160px; object-fit: cover; object-position: top; border-radius: 50%; margin-bottom: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 4px solid #2f3336;" />
                 <h3>About</h3>
                 <p class="text-gray">
-                    I'm Simon Taylor, founder of SJT Digital. With a background in product engineering, IT operations, and AI deployment, I work with leaders of small and mid-sized organisations to identify what's holding them back and implement changes that move the bottom line. My focus is always on measurable outcomes and operational clarity.
+                    I'm Simon Taylor, founder of SJT Digital. With a background in product engineering, IT operations,
+                    and AI deployment, I work with leaders of small and mid-sized organisations to identify what's
+                    holding them back and implement changes that move the bottom line. My focus is always on measurable
+                    outcomes and operational clarity.
                 </p>
             </div>
         </section>
@@ -99,21 +126,52 @@
             </div>
         </section>
 
-        <section id="contact" class="dark-bg">
-            <div class="container content">
-                <h3>Contact</h3>
-                <p class="text-gray mb-2">Interested in working together? Let's talk.</p>
-                <p class="text-gray">Phone: <a href="tel:07972377139" class="underline">07972 377139</a></p>
-                <p class="text-gray">Email: <a href="mailto:info@sjtdigital.com" onclick="gtag('event', 'contact', { 'method': 'email' });">info@sjtdigital.com</a></p>
+        <section id="clients" class="dark-bg">
+            <div class="container content" style="text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
+                <div style="overflow: hidden; width: 100%; position: relative;">
+                    <div class="logo-carousel"
+                        style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <!-- Duplicate logos for seamless loop -->
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                    </div>
+                </div>
             </div>
         </section>
+
+
     </main>
 
     <footer>
-        &copy; <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
         <span style="margin-left: 1rem;">
             <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
         </span>
     </footer>
 </body>
-</html> 
+
+</html>

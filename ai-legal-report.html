@@ -37,6 +37,20 @@
     <meta property="twitter:image" content="/assets/sjt-digital.png">
 
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .logo-carousel {
+            width: 200%;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +60,7 @@
             <nav aria-label="Main navigation">
                 <a href="/#about">About</a>
                 <a href="/#services">Services</a>
-                <a href="/#contact">Contact</a>
+                <a href="contact.html">Contact</a>
                 <a href="blog.html">Blog</a>
             </nav>
         </div>
@@ -90,9 +104,45 @@
                             that enhance productivity while maintaining client confidentiality.
                         </p>
                         <p style="margin-bottom: 0;">
-                            <a href="/#contact" onclick="gtag('event', 'click', { 'link_text': 'Get in touch' });" style="color: #007acc;">Get in touch</a> to discuss your specific
+                            <a href="contact.html" onclick="gtag('event', 'click', { 'link_text': 'Get in touch' });" style="color: #007acc;">Get in touch</a> to discuss your specific
                             requirements.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="dark-bg">
+            <div class="container content" style="text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
+                <div style="overflow: hidden; width: 100%; position: relative;">
+                    <div class="logo-carousel"
+                        style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <!-- Duplicate logos for seamless loop -->
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
                     </div>
                 </div>
             </div>

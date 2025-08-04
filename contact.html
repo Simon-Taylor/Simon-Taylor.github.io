@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SJT Digital</title>
+    <meta name="description"
+        content="Get in touch with SJT Digital for operational efficiency consulting, AI implementation, and technology leadership services.">
+    <meta name="author" content="Simon Taylor">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sjtdigital.com/contact">
+    <meta property="og:title" content="Contact | SJT Digital">
+    <meta property="og:description"
+        content="Get in touch with SJT Digital for operational efficiency consulting, AI implementation, and technology leadership services.">
+    <meta property="og:image" content="/assets/sjt-digital.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sjtdigital.com/contact">
+    <meta property="twitter:title" content="Contact | SJT Digital">
+    <meta property="twitter:description"
+        content="Get in touch with SJT Digital for operational efficiency consulting, AI implementation, and technology leadership services.">
+    <meta property="twitter:image" content="/assets/sjt-digital.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-carousel {
+            width: 200%;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .contact-card {
+            background: #23272a;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .book-button {
+            display: inline-block;
+            background-color: #007acc;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            margin: 1rem 0;
+        }
+
+        .book-button:hover {
+            background-color: #005a99;
+            text-decoration: none;
+        }
+
+        .contact-method {
+            background: #23272a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #007acc;
+        }
+
+        .contact-method h4 {
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .contact-method p {
+            margin-bottom: 0;
+        }
+
+        .contact-method a {
+            color: #007acc;
+            font-weight: 500;
+        }
+
+        .contact-method a:hover {
+            color: #005a99;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1><a href="/" style="text-decoration: none; color: inherit;">SJT Digital</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/#about">About</a>
+                <a href="/#services">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Let's Work Together</h2>
+                <p class="text-gray">Ready to unlock your organisation's potential? Let's discuss how I can help you
+                    achieve measurable results.</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <span class="contact-icon">📅</span>
+                            <h3>Book a Call</h3>
+                            <p class="text-gray mb-2">
+                                Schedule a free 30-minute consultation to discuss your challenges and explore how I can
+                                help.
+                            </p>
+                            <a href="https://calendly.com/simon-j-taylor/30min" target="_blank"
+                                rel="noopener noreferrer" class="book-button"
+                                onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });">
+                                Book Your Free Call
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-icon">✉️</span>
+                            <h3>Send a Message</h3>
+                            <p class="text-gray mb-2">
+                                Prefer to start with an email? Drop me a line and I'll get back to you within 24 hours.
+                            </p>
+                            <a href="mailto:info@sjtdigital.com" class="book-button"
+                                onclick="gtag('event', 'contact', { 'method': 'email' });">
+                                Send Email
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 4rem;">
+                        <h3 style="text-align: center; margin-bottom: 2rem;">Get in Touch</h3>
+
+                        <div class="contact-method">
+                            <h4>📞 Phone</h4>
+                            <p class="text-gray">
+                                <a href="tel:07972377139"
+                                    onclick="gtag('event', 'contact', { 'method': 'phone' });">07972 377139</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h4>✉️ Email</h4>
+                            <p class="text-gray">
+                                <a href="mailto:info@sjtdigital.com"
+                                    onclick="gtag('event', 'contact', { 'method': 'email' });">info@sjtdigital.com</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="dark-bg">
+            <div class="container content" style="text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
+                <div style="overflow: hidden; width: 100%; position: relative;">
+                    <div class="logo-carousel"
+                        style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <!-- Duplicate logos for seamless loop -->
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        <span style="margin-left: 1rem;">
+            <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
+        </span>
+    </footer>
+</body>
+
+</html>
