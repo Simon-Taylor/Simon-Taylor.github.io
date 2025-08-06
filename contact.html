@@ -50,11 +50,22 @@
             width: 200%;
         }
 
+        .hero {
+            padding: 6rem 0 2rem 0;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 1rem;
+            gap: 2rem;
+            margin-top: 0;
+        }
+
+        .contact-grid-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         @media (max-width: 768px) {
@@ -149,53 +160,50 @@
                 <div style="max-width: 800px; margin: 0 auto;">
                     <div class="contact-grid">
                         <div class="contact-card">
-                            <span class="contact-icon">📅</span>
-                            <h3>Book a Call</h3>
+                            <span class="contact-icon">📞</span>
+                            <h3>Call Me</h3>
                             <p class="text-gray mb-2">
-                                Schedule a free 30-minute consultation to discuss your challenges and explore how I can
-                                help.
+                                Ready to discuss your project? Give me a call for an immediate conversation about your needs.
                             </p>
-                            <a href="https://calendly.com/simon-j-taylor/30min" target="_blank"
-                                rel="noopener noreferrer" class="book-button"
-                                onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });">
-                                Book Your Free Call
+                            <a href="tel:07972377139" 
+                               class="book-button"
+                               onclick="gtag('event', 'contact', { 'method': 'phone' });">
+                                07972 377139
                             </a>
                         </div>
 
                         <div class="contact-card">
                             <span class="contact-icon">✉️</span>
-                            <h3>Send a Message</h3>
+                            <h3>Send Email</h3>
                             <p class="text-gray mb-2">
                                 Prefer to start with an email? Drop me a line and I'll get back to you within 24 hours.
                             </p>
-                            <a href="mailto:info@sjtdigital.com" class="book-button"
-                                onclick="gtag('event', 'contact', { 'method': 'email' });">
-                                Send Email
+                            <a href="mailto:info@sjtdigital.com" 
+                               class="book-button"
+                               onclick="gtag('event', 'contact', { 'method': 'email' });">
+                                info@sjtdigital.com
                             </a>
                         </div>
                     </div>
 
-                    <div style="margin-top: 4rem;">
-                        <h3 style="text-align: center; margin-bottom: 2rem;">Get in Touch</h3>
-
-                        <div class="contact-method">
-                            <h4>📞 Phone</h4>
-                            <p class="text-gray">
-                                <a href="tel:07972377139"
-                                    onclick="gtag('event', 'contact', { 'method': 'phone' });">07972 377139</a>
+                    <div class="contact-grid-full">
+                        <div class="contact-card">
+                            <span class="contact-icon">📅</span>
+                            <h3>Book a Call</h3>
+                            <p class="text-gray mb-2">
+                                Schedule a free 30-minute consultation to discuss your challenges and explore solutions.
                             </p>
+                            <a href="https://calendly.com/simon-j-taylor/30min" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="book-button"
+                               onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });">
+                                Schedule Meeting
+                            </a>
                         </div>
-
-                        <div class="contact-method">
-                            <h4>✉️ Email</h4>
-                            <p class="text-gray">
-                                <a href="mailto:info@sjtdigital.com"
-                                    onclick="gtag('event', 'contact', { 'method': 'email' });">info@sjtdigital.com</a>
-                            </p>
-                        </div>
-
-
                     </div>
+
+
 
 
 
