@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GJ8NNXBM1Z');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Back to Cursor: Testing GPT-5 for Coding | SJT Digital</title>
-    <meta name="description" content="Testing GPT-5 as a coding assistant in Cursor, comparing it to Kiro's Claude Sonnet 4, and exploring workflow portability between AI coding tools.">
+    <meta name="description"
+        content="Testing GPT-5 as a coding assistant in Cursor, comparing it to Kiro's Claude Sonnet 4, and exploring workflow portability between AI coding tools.">
     <meta name="author" content="Simon Taylor">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -32,52 +35,100 @@
     <main class="container blog-list">
         <div class="blog-post">
             <h2>Back to Cursor: Testing GPT-5 for Coding</h2>
-            <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon Taylor &middot; Published 15-8-2025</p>
-            <p>A few weeks ago, I received an email from the Cursor team that made me stop what I was doing. For a short window of three or four days, GPT-5 would be free to use inside Cursor. I had already been curious about how GPT-5 would perform as a coding assistant, so this was the perfect opportunity to test it.</p>
-            <p>Cursor and Kiro are both forks of Visual Studio Code, but they take slightly different approaches. Kiro adds a guided workflow that starts with a requirements file, moves to a design file, and finally breaks the work into tasks. Cursor is more free-form, which means the way you structure your work is entirely up to you. For this test I wanted to see whether GPT-5 could work effectively inside a manually structured project, and whether the experience would be noticeably different from Kiro's Claude Sonnet 4 preview mode.</p>
-            <p>Before starting, I checked the LMArena leaderboards. LMArena is a site where humans compare answers from different models in a blind A/B test, and rankings are based on which responses are preferred. In their Web Dev category, which covers HTML, CSS, and JavaScript tasks, GPT-5 High is in first place by a wide margin. That ranking gave me some confidence that it would perform well for my use case. Interestingly, in their separate Copilot category, GPT-5 does not appear in the top thirteen at all, while Claude 3.5 Sonnet leads the list. This seems unusual, but for this experiment I chose to focus on the Web Dev category where GPT-5 is clearly ahead.</p>
+            <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon
+                Taylor &middot; Published 15-8-2025</p>
+            <p>A few weeks ago, I received an email from the Cursor team that made me stop what I was doing. For a short
+                window of three or four days, GPT-5 would be free to use inside Cursor. I had already been curious about
+                how GPT-5 would perform as a coding assistant, so this was the perfect opportunity to test it.</p>
+            <p>Cursor and Kiro are both forks of Visual Studio Code, but they take slightly different approaches. Kiro
+                adds a guided workflow that starts with a requirements file, moves to a design file, and finally breaks
+                the work into tasks. Cursor is more free-form, which means the way you structure your work is entirely
+                up to you. For this test I wanted to see whether GPT-5 could work effectively inside a manually
+                structured project, and whether the experience would be noticeably different from Kiro's Claude Sonnet 4
+                preview mode.</p>
+            <p>Before starting, I checked the <a href="https://lmarena.ai/leaderboard/webdev"
+                    style="color: #3b82f6;">LMArena leaderboards</a>. LMArena is a site where humans compare answers
+                from
+                different models in a blind A/B test, and rankings are based on which responses are preferred. In their
+                Web Dev category, which covers HTML, CSS, and JavaScript tasks, GPT-5 High is in first place by a wide
+                margin. That ranking gave me some confidence that it would perform well for my use case. Interestingly,
+                in their separate Copilot category, GPT-5 does not appear in the top thirteen at all, while Claude 3.5
+                Sonnet leads the list. This seems unusual, but for this experiment I chose to focus on the Web Dev
+                category where GPT-5 is clearly ahead.</p>
+            <img src="assets/coding-models.jpg" alt="AI coding models comparison and performance screenshot"
+                style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
             <hr>
             <h3>Re-creating the Kiro workflow inside Cursor</h3>
-            <p>Part of the experiment was about workflow portability. I wanted to see whether I could take Kiro's structured approach and replicate it in Cursor so the same project could live in both environments.</p>
-            <p>I started by creating a .kiro folder in my Cursor project. Inside it I added a specs folder, then a folder for the project name, and inside that three files:</p>
+            <p>Part of the experiment was about workflow portability. I wanted to see whether I could take Kiro's
+                structured approach and replicate it in Cursor so the same project could live in both environments.</p>
+            <p>I started by creating a .kiro folder in my Cursor project. Inside it I added a specs folder, then a
+                folder for the project name, and inside that three files:</p>
             <ul>
                 <li>requirements.md</li>
                 <li>design.md</li>
                 <li>tasks.md</li>
             </ul>
-            <p>The project itself was a lead generation tool to help me find prospects. I wanted to use MCP as part of the build to better understand how MCP works. The usefulness of the tool was not the priority; the main goal was to evaluate GPT-5 in a real coding workflow.</p>
-            <p>I began by prompting GPT-5 in Cursor to write the requirements.md. It produced a clear purpose, a set of goals, and functional requirements. It did not automatically use the Given / When / Then style that Kiro often produces, but I had not explicitly asked for it. My guess is that Kiro achieves that format through hidden prompt instructions.</p>
-            <p>For the design phase, I asked GPT-5 to use Mermaid syntax so I could view diagrams with the Markdown Preview Enhanced plugin. The resulting design.md described an agent command-line interface with three MCP servers: a prompt catalog, a file system, and an optional Slack integration. The file system MCP would handle folders for prospects, criteria, and reports.</p>
-            <img src="assets/cursor.jpg" alt="Cursor IDE with GPT-5 integration screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <p>The project itself was a lead generation tool to help me find prospects. I wanted to use MCP as part of
+                the build to better understand how MCP works. The usefulness of the tool was not the priority; the main
+                goal was to evaluate GPT-5 in a real coding workflow.</p>
+            <p>I began by prompting GPT-5 in Cursor to write the requirements.md. It produced a clear purpose, a set of
+                goals, and functional requirements. It did not automatically use the Given / When / Then style that Kiro
+                often produces, but I had not explicitly asked for it. My guess is that Kiro achieves that format
+                through hidden prompt instructions.</p>
+            <p>For the design phase, I asked GPT-5 to use Mermaid syntax so I could view diagrams with the Markdown
+                Preview Enhanced plugin. The resulting design.md described an agent command-line interface with three
+                MCP servers: a prompt catalog, a file system, and an optional Slack integration. The file system MCP
+                would handle folders for prospects, criteria, and reports.</p>
+            <img src="assets/cursor.jpg" alt="Cursor IDE with GPT-5 integration screenshot"
+                style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
             <hr>
             <h3>How GPT-5 performed as a coding model</h3>
-            <p>With requirements.md and design.md complete, I moved to tasks.md and began the implementation. This was where I wanted to see how GPT-5 would behave when asked to follow a structured process without a dedicated UI keeping it on track.</p>
-            <p>The model surprised me in a good way. It was able to interpret the tasks, work through them sequentially, and mark them as complete. It also suggested adjustments to the requirements and task list as we progressed, which gave the process a natural flow. It handled file creation and editing with minimal back-and-forth, and it understood context from earlier parts of the conversation well enough to avoid repeating work unnecessarily.</p>
-            <p>From a code quality perspective, what GPT-5 produced was solid. It was readable, logically organised, and free from obvious bugs. It showed good awareness of modern coding practices, and its explanations for changes were concise but clear. However, when I compared the overall experience to using Claude Sonnet 4 in Kiro's preview mode, the gap was smaller than I expected. Both models were highly capable, and for my style of work the difference was more subtle than dramatic.</p>
-            <img src="assets/coding-models.jpg" alt="AI coding models comparison and performance screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <p>With requirements.md and design.md complete, I moved to tasks.md and began the implementation. This was
+                where I wanted to see how GPT-5 would behave when asked to follow a structured process without a
+                dedicated UI keeping it on track.</p>
+            <p>The model surprised me in a good way. It was able to interpret the tasks, work through them sequentially,
+                and mark them as complete. It also suggested adjustments to the requirements and task list as we
+                progressed, which gave the process a natural flow. It handled file creation and editing with minimal
+                back-and-forth, and it understood context from earlier parts of the conversation well enough to avoid
+                repeating work unnecessarily.</p>
+            <p>From a code quality perspective, what GPT-5 produced was solid. It was readable, logically organised, and
+                free from obvious bugs. It showed good awareness of modern coding practices, and its explanations for
+                changes were concise but clear. However, when I compared the overall experience to using Claude Sonnet 4
+                in Kiro's preview mode, the gap was smaller than I expected. Both models were highly capable, and for my
+                style of work the difference was more subtle than dramatic.</p>
             <hr>
             <h3>Thoughts on self-hostable alternatives</h3>
-            <p>Both GPT-5 and Claude Sonnet 4 are proprietary and cloud-only, which means there is no way to run them entirely on your own hardware. However, LM Arena's Web Dev rankings include an interesting fourth-place contender: DeepSeek R1 0528. This model is MIT-licensed and self-hostable.</p>
-            <p>Both GPT-5 and Claude Sonnet 4 are proprietary and cloud-only, which means there is no way to run them entirely on your own hardware. However, LMArena's Web Dev rankings include an interesting fourth-place contender: DeepSeek R1 0528. This model is MIT-licensed and self-hostable.</p>
-            <p>Self-hosting comes with an upfront hardware cost, but once the infrastructure is in place you are not paying for API calls. That changes the economics significantly, especially for teams that need to run a large volume of completions. This is a topic I plan to explore in more detail in a future post.</p>
+            <p>Both GPT-5 and Claude Sonnet 4 are proprietary and cloud-only, which means there is no way to run them
+                entirely on your own hardware. However, LMArena's Web Dev rankings include an interesting fourth-place
+                contender: DeepSeek R1 0528. This model is MIT-licensed and self-hostable.</p>
+            <p>Self-hosting comes with an upfront hardware cost, but once the infrastructure is in place you are not
+                paying for API calls. That changes the economics significantly, especially for teams that need to run a
+                large volume of completions. This is a topic I plan to explore in more detail in a future post.</p>
             <hr>
             <h3>Key takeaways</h3>
             <ul>
-                <li>GPT-5 is an excellent coding model, performing strongly in web development benchmarks and handling structured workflows well.</li>
-                <li>Cursor can replicate Kiro's requirements → design → tasks process with .md files, but you need to manage the discipline yourself.</li>
-                <li>Code quality from GPT-5 was high, but in this experiment it felt similar in practice to Claude Sonnet 4.</li>
-                <li>Self-hostable models like DeepSeek R1 are becoming competitive with the top cloud-only options and could be worth considering for certain projects.</li>
+                <li>GPT-5 is an excellent coding model, performing strongly in web development benchmarks and handling
+                    structured workflows well.</li>
+                <li>Cursor can replicate Kiro's requirements → design → tasks process with .md files, but you need to
+                    manage the discipline yourself.</li>
+                <li>Code quality from GPT-5 was high, but in this experiment it felt similar in practice to Claude
+                    Sonnet 4.</li>
+                <li>Self-hostable models like DeepSeek R1 are becoming competitive with the top cloud-only options and
+                    could be worth considering for certain projects.</li>
             </ul>
-            <p>In the next post, I will look at the economics and trade-offs of running a high-performing model entirely on your own hardware, and how that might change the way teams think about AI-powered development.</p>
+            <p>In the next post, I will look at the economics and trade-offs of running a high-performing model entirely
+                on your own hardware, and how that might change the way teams think about AI-powered development.</p>
             <hr>
             <p><a href="blog.html" style="color: #3b82f6;">← Back to Blog</a></p>
         </div>
     </main>
     <footer>
-        &copy; <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
         <span style="margin-left: 1rem;">
             <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
         </span>
     </footer>
 </body>
+
 </html>
