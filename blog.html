@@ -31,107 +31,18 @@
     </header>
     <main class="container blog-list">
         <div class="blog-post">
-            <h2>Kiro: Amazon’s Quietly Brilliant Entry into AI-Assisted Coding</h2>
+            <h2><a href="cursor-gpt5-coding.html" style="color: inherit; text-decoration: none;">Back to Cursor: Testing GPT-5 for Coding</a></h2>
+            <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon Taylor &middot; Published 15-8-2025</p>
+            <p>A few weeks ago, I received an email from the Cursor team that made me stop what I was doing. For a short window of three or four days, GPT-5 would be free to use inside Cursor. I had already been curious about how GPT-5 would perform as a coding assistant, so this was the perfect opportunity to test it.</p>
+            <p>I wanted to see whether GPT-5 could work effectively inside a manually structured project, and whether the experience would be noticeably different from Kiro's Claude Sonnet 4 preview mode. The results were interesting...</p>
+            <p><a href="cursor-gpt5-coding.html" style="color: #3b82f6;">Read more →</a></p>
+        </div>
+        <div class="blog-post">
+            <h2><a href="kiro-amazon-ai-coding.html" style="color: inherit; text-decoration: none;">Kiro: Amazon's Quietly Brilliant Entry into AI-Assisted Coding</a></h2>
             <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon Taylor &middot; Published 17-7-2025</p>
-            <p>As someone who regularly experiments with new AI tooling, I was curious to see how Kiro compares to more established options. I’d been a long-time Cursor user - drawn to its deeper AI integration and workflow support - but recent pricing changes made me reconsider. With Cursor now in murky territory on cost and transparency, I was open to alternatives.</p>
-            <p>Kiro had just launched, it was free to use during preview, and it promised a more structured, spec-driven development experience powered by Claude Sonnet 4.0 / 3.7. That was more than enough reason to take it for a spin.</p>
-            <p>I’ve been using Kiro for a couple of days now, and I’ve got thoughts. If you’re curious about what it is, how it works, and whether it’s worth your time, read on.</p>
-            <hr>
-            <h3>Why I Tried Kiro: A Cursor Survivor’s Tale</h3>
-            <p>My own AI coding journey started with VS Code and GitHub Copilot. It felt like magic - until it wasn’t. Cursor came next, with its deeper integration of AI and more intelligent workflows. For a while, Cursor became my go-to.</p>
-            <p>Then came the pricing saga. If you missed it, Cursor recently changed their pricing model (again), resulting in some eye-watering bills and a fair bit of confusion. Like many others, I cancelled my subscription. Suddenly tool-less and curious, I stumbled on Kiro - just launched, free to use during preview, and promising a structured coding experience.</p>
-            <p>That sounded like a perfect excuse to try something new, learn a few things, and put Kiro through its paces.</p>
-            <hr>
-            <h3>What Is Kiro?</h3>
-            <p>At its core, Kiro is a fork of VS Code. It looks and feels exactly like the editor you already know. That’s a good thing. You get access to all your usual extensions, keyboard shortcuts, and workflows.</p>
-            <p>But Amazon has added something important: the Kiro panel. Think of it as a workflow guide that nudges you into doing three things before you dive into the code:</p>
-            <ol>
-                <li>Define requirements</li>
-                <li>Design your solution</li>
-                <li>Execute the build via a task list</li>
-            </ol>
-            
-            <h3>Spec Mode: A Breath of Fresh Air</h3>
-            <p>When you first launch Kiro, you’re given a choice between two modes: Vibe Coding and Spec Mode.</p>
-            <ul>
-                <li>Vibe Coding is like what you get with Cursor or Copilot Chat. You talk to the AI, it responds, you build as you go.</li>
-                <li>Spec Mode is the star of the show. It structures your build around well - defined planning steps.</li>
-            </ul>
-            <p>I picked Spec Mode to test a project I’d been meaning to build anyway: a multi-agent trading system using the Model Context Protocol (MCP). I wanted to see if Kiro could help me go from idea to functional scaffold more cleanly than my usual haphazard process.</p>
-            <p><strong>Spoiler: it did.</strong></p>
-            <img src="assets/let's build.jpg" alt="Kiro Spec Mode selection screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
-            <hr>
-            <h3>Stage 1: Requirements That Actually Make Sense</h3>
-            <p>Before writing any code, I fed Kiro a high-level prompt (partly generated in ChatGPT) describing what I wanted to build. Kiro took this and generated a requirements.md file containing:</p>
-            <ul>
-                <li>A project intro</li>
-                <li>Clear feature descriptions</li>
-                <li>Proper user stories</li>
-                <li>Given/When/Then acceptance criteria</li>
-            </ul>
-            <p>Anyone with a background in product engineering will feel right at home. It was like having a product manager sitting beside me, translating vague ideas into something buildable. Except it was a Claude-powered AI, and it didn’t need coffee.</p>
-            <hr>
-            <p><em><img src="assets/requirements.jpg" alt="Kiro’s Generated Product Overview screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" /></em></p>
-            <hr>
-            <h3>Stage 2: Design With Built-In Diagrams</h3>
-            <p>Next came the design.md file. This was Kiro’s suggestion of how to implement the system I had described.</p>
-            <ul>
-                <li>A multi-agent architecture</li>
-                <li>Use of Claude for reasoning</li>
-                <li>Inter-agent communication using MCP</li>
-                <li>TypeScript for implementation</li>
-                <li>Jest for testing</li>
-            </ul>
-            <p>It even rendered architecture diagrams using Mermaid syntax. Thanks to VS Code compatibility, I installed the Markdown Preview Enhanced plugin and viewed these as beautifully formatted visuals right inside Kiro.</p>
-            <hr>
-            <p><em><img src="assets/design.jpg" alt="Kiro AI Trading System Design Document screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" /></em></p>
-            <p><em><img src="assets/architecture.jpg" alt="Kiro High-Level Architecture diagram screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" /></em></p>
-            <hr>
-            <h3>Stage 3: Building With a Task List (and Claude Under the Hood)</h3>
-            <p>Then came the build phase. Kiro turned the design into a task list, breaking it into logical steps like:</p>
-            <ul>
-                <li>Set up project structure</li>
-                <li>Define core interfaces</li>
-                <li>Implement data fetchers</li>
-                <li>Write agent orchestration logic</li>
-            </ul>
-            <p>Each task came with sub-tasks and guidance. As I worked through them, I could mark them complete, which gave a sense of momentum. The interface is clean and motivating - more than I expected, actually. At times it felt like pairing with a senior engineer who’d already done the hard thinking.</p>
-            <img src="assets/task list.jpg" alt="Kiro task list screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
-            <p>Behind the scenes, Kiro uses Claude Sonnet 4.0 / 3.7 for all generation. There’s no model choice (yet), but Claude performed well throughout.</p>
-            <hr>
-            <h3>Reflections on the Workflow</h3>
-            <p>What really impressed me about Kiro was the workflow.</p>
-            <p>Too many AI tools fall into the trap of “magic button” syndrome. You paste a vague prompt and hope for the best. Sometimes it works. Often it doesn’t.</p>
-            <p>Kiro avoids that by encouraging structured thinking:</p>
-            <ul>
-                <li>First, clarify what you’re building</li>
-                <li>Then, define how it should be built</li>
-                <li>Finally, break it down into concrete steps</li>
-            </ul>
-            <p>It’s a subtle shift, but it makes a big difference. The resulting code felt better aligned to the original goals, and I spent less time debugging surprises from the AI.</p>
-            <hr>
-            <h3>Limitations I Noticed</h3>
-            <p>A few rough edges remain:</p>
-            <ul>
-                <li>Git integration is glitchy. The UI sometimes fails to stage or commit changes. I had to fall back to command-line Git.</li>
-                <li>No integration with ChatGPT Desktop. Cursor and VS Code let you reflect output directly to ChatGPT. Kiro doesn’t (yet).</li>
-                <li>Only Claude is supported. It’d be nice to add OpenAI or Gemini models. But Sonnet is excellent, so not a dealbreaker.</li>
-            </ul>
-            <hr>
-            <h3>Pricing: Sensible (for Now)</h3>
-            <p>During the preview, Kiro is free to use. I haven’t hit any usage caps yet.</p>
-            <p>Once out of preview, the pricing tiers will be:</p>
-            <ul>
-                <li>Pro – $19/month (1,000 interactions)</li>
-                <li>Pro Plus – $39/month (3,000 interactions)</li>
-            </ul>
-            <p>It’s unclear how interactions are measured, but it looks simpler and more predictable than Cursor’s current setup.</p>
-            <hr>
-            <h3>Final Thoughts: A Thoughtful Tool Worth Your Time</h3>
-            <p>Kiro is polished. It’s opinionated in a good way. And it’s the first AI coding tool I’ve used that truly supports structured thinking.</p>
-            <p>If you’re already a power user of Cursor, this won’t feel revolutionary. But if you’ve ever found yourself in AI-prompt rabbit holes or building half-baked features that go nowhere, Kiro might be exactly what you need.</p>
-            <p>And it’s free right now. So go try it before it costs you anything. For my part, I’ll keep using it for structured builds and exploring what else this Claude-powered IDE can do.</p>
-            <p>Whether the MCP trading bot ever makes a trade - let alone a profit - remains to be seen. But just shaping the idea in Kiro has already been a worthwhile experience.</p>
+            <p>As someone who regularly experiments with new AI tooling, I was curious to see how Kiro compares to more established options. I'd been a long-time Cursor user - drawn to its deeper AI integration and workflow support - but recent pricing changes made me reconsider.</p>
+            <p>Kiro had just launched, it was free to use during preview, and it promised a more structured, spec-driven development experience powered by Claude Sonnet 4.0 / 3.7. That was more than enough reason to take it for a spin...</p>
+            <p><a href="kiro-amazon-ai-coding.html" style="color: #3b82f6;">Read more →</a></p>
         </div>
     </main>
     <footer>
@@ -141,4 +52,4 @@
         </span>
     </footer>
 </body>
-</html> 
+</html>
