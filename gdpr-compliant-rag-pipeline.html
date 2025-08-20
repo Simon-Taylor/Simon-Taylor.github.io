@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Building a Fully Self Hosted, GDPR Compliant RAG Pipeline | SJT Digital</title>
+    <meta name="description" content="A detailed case study of building a fully self-hosted, GDPR-compliant RAG pipeline using open source tools, from PrivateGPT to Dify, with lessons learned.">
+    <meta name="author" content="Simon Taylor">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1><a href="/">SJT Digital</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container blog-list">
+        <div class="blog-post">
+            <h2>Case Study: Building a Fully Self Hosted, GDPR Compliant RAG Pipeline</h2>
+            <p class="blog-meta" style="color:#b0b6be;font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon Taylor &middot; Published 18-8-2025</p>
+            <p>When I started working with this client group, the brief was simple. They wanted a way for people across the organisation to query product knowledge directly, without trawling through manuals, PDFs, or wikis. The idea was that if all the product documentation could be made searchable through an AI interface, staff would be able to answer questions much more quickly.</p>
+            <p>From there the project expanded. We realised that product documentation was only half of the story. Six years of support ticket history contained a wealth of practical knowledge about how the products worked in real situations. Adding that history would make the AI much more useful. But it also raised difficult questions about privacy and GDPR.</p>
+            <p>What started as a straightforward experiment with product manuals turned into the development of a fully self hosted AI platform. It now delivers a private, compliant, and practical way of combining official documentation with lived knowledge from real customer support.</p>
+            <img src="assets/self-hosted-ai.png" alt="Self-hosted AI architecture diagram" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <hr>
+            <h3>Starting point: TypingMind and OpenAI APIs</h3>
+            <p>The first step was TypingMind, a third party tool that provides a RAG pipeline over commercial large language models such as OpenAI. It worked well for product manuals and training documents, and the licensing model was simple: a per-user fee, a cost per million characters of training data, and a usage cost for every API call.</p>
+            <p>For this stage, it was fine. Product PDFs, web guides, and manuals could be ingested quickly. But we wanted more than just official documentation. Support tickets offered real-world context that the manuals did not. And the moment support data entered the conversation, GDPR became the central issue. Sensitive personal information could not be sent to OpenAI or any other cloud provider. That was when the case for self hosting became unavoidable.</p>
+            <img src="assets/typing-mind.webp" alt="TypingMind RAG pipeline interface screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <hr>
+            <h3>PrivateGPT: the first self hosted option</h3>
+            <p>The first self hosted system we tried was PrivateGPT. This is an open source Python application with a Gradio front end that lets you upload documents locally, create embeddings, and query them against a local model. On my laptop it worked, albeit slowly.</p>
+            <p>The hosting provider purchased a Mac Mini and deployed it in their data centre. This turned out to be a smart choice, because Apple's optimisation for AI workloads means that Mac Minis can run open source models surprisingly well. PrivateGPT gave us the first working example of a self hosted AI capable of handling product documentation.</p>
+            <p>But PrivateGPT had limits. It lacked authentication, had no support for multiple users, and was not built with enterprise scale in mind. It proved that a local approach could work, but it could not take us the whole way.</p>
+            <img src="assets/private-gpt.avif" alt="PrivateGPT interface screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <hr>
+            <h3>Building our own pipeline</h3>
+            <p>The next step was to try writing my own RAG pipeline. </p>
+            <p>The first attempt was very much vibe coding. I wrote prompts describing the system I wanted, and the AI generated scripts. It felt promising at first, but the results were brittle. Some parts worked until they didn't, and other parts were hallucinated entirely.</p>
+            <p>The second attempt was more structured. I introduced Haystack, thought about the architecture carefully, and created something functional. But again, I found myself chasing edge cases and writing a lot of glue code. It quickly became clear that I needed a better platform.</p>
+            <hr>
+            <h3>The breakthrough with Dify</h3>
+            <p>That platform turned out to be Dify. Dify is a low code system for building AI applications, and it immediately solved many of the problems we were hitting. It provided a clean web UI for managing documents, handled embeddings and vector databases, integrated easily with Ollama for local model hosting, and gave us control over model settings such as temperature to reduce hallucinations.</p>
+            <p>Most importantly, this was the point where choosing and testing the right models for the hardware became essential. The Mac Mini had enough power, but not for everything. Some models were simply too large to run effectively. I spent significant time testing combinations until I found the right balance.</p>
+            <p>I settled on Mistral 12B for completions and a smaller embedding model for ingestion. The smaller model kept ingestion fast, while the larger one provided strong answers. This combination was reliable on the available hardware and gave us the performance we needed.</p>
+            <img src="assets/dify.png" alt="Dify AI application platform interface screenshot" style="display:block;max-width:100%;margin:2rem auto;border-radius:0.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
+            <hr>
+            <h3>Expanding beyond documentation: support data</h3>
+            <p>With the product manuals working well, the next challenge was integrating support ticket history. This data was far less structured and much harder to handle.</p>
+            <p>One product had a proprietary helpdesk system that only exported the first and last message in each ticket. I had to write scripts to crawl the database and reconstruct the missing conversations. Another product used Microsoft SQL. Another had no ticketing system at all and relied on email.</p>
+            <p>Each source required bespoke ETL pipelines to transform the raw conversations into clean markdown that Dify could ingest. Adding this layer of history meant that staff could not only query official product documentation but also see the context of real issues that customers had encountered and how they were solved.</p>
+            <hr>
+            <h3>The delivered system</h3>
+            <p>The final solution was a set of self hosted chatbots, all running on servers inside the client's data centre.</p>
+            <ul>
+                <li>Product knowledge chatbots, trained on manuals, guides, and documentation.</li>
+                <li>Support-augmented chatbots, which layered six years of ticket history on top of the official documentation.</li>
+                <li>A compliance chatbot, loaded with ISO 27001 information, security policies, and audit responses.</li>
+            </ul>
+            <p>Everything ran behind password protected web interfaces, with the AI engine completely isolated from the internet. Sensitive data never left the environment, ensuring GDPR compliance at every step.</p>
+            <hr>
+            <h3>Lessons learned</h3>
+            <p>Several lessons stand out from this project.</p>
+            <ul>
+                <li>GDPR is not optional. Compliance drove the decision to self host and shaped every technical choice.</li>
+                <li>Model choice is critical. Testing combinations of models against the available hardware made the difference between a system that was a slow demo and one that was genuinely usable.</li>
+                <li>ETL matters. Product manuals are relatively easy to ingest, but real-world support data needs serious preprocessing to become useful.</li>
+                <li>Low code can accelerate delivery. Dify provided the stability and polish that let us stop chasing edge cases and focus on delivering value.</li>
+                <li>Start broad, then augment. Beginning with documentation and layering support history on top created a richer and more balanced knowledge base.</li>
+            </ul>
+            <hr>
+            <h3>Closing thoughts</h3>
+            <p>This project began as a way to make product documentation more accessible. It evolved into a self hosted, GDPR compliant AI platform that combined official product knowledge with years of real world experience from support tickets.</p>
+            <p>The real value came from putting those two sources together. Documentation provided the baseline, and support history provided the context. Choosing the right models for the hardware and building robust ETL pipelines turned the idea into something practical.</p>
+            <p>The result was a system that delivered fast, accurate, and private answers to staff across the organisation, without ever sending sensitive data outside the firewall.</p>
+            <hr>
+            <p><a href="blog.html" style="color: #3b82f6;">← Back to Blog</a></p>
+        </div>
+    </main>
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        <span style="margin-left: 1rem;">
+            <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
+        </span>
+    </footer>
+</body>
+</html>
