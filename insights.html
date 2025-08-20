@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | SJT Digital</title>
+    <meta name="description" content="Watch key insights from Simon Taylor's work with PE-backed businesses, AI implementation, and delivering measurable growth.">
+    <meta name="author" content="Simon Taylor">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-card {
+            background: #23272a;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+            border: 1px solid #4b5563;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .video-container {
+            position: relative;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container video {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-container::before {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
+            background: rgba(0,0,0,0.6);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 4px;
+        }
+
+        .video-container:hover::before {
+            opacity: 1;
+        }
+
+        .video-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .video-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #d1d5db;
+        }
+
+        .video-container video:not([controls])::-webkit-media-controls {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .video-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1><a href="/">SJT Digital</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Insights & Expertise</h2>
+            <p class="text-gray">
+                Watch key insights from my work with PE-backed businesses, AI implementation, and delivering measurable growth. These videos showcase practical approaches to common challenges in technology leadership and business transformation.
+            </p>
+        </section>
+
+        <section class="dark-bg" style="padding: 4rem 0;">
+            <div class="container content">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video 
+                                poster="assets/video/thumbnails/advice-interim-engineers.jpg"
+                                preload="none"
+                                controls
+                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <source src="assets/video/web-advice-interim-engineers.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h4>Advice to Interim Engineers in PE Backed Businesses</h4>
+                        <p class="text-gray">Key strategies for interim engineers working in private equity environments, including how to navigate stakeholder expectations and deliver rapid value.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video 
+                                poster="assets/video/thumbnails/delivering-impact-ai.jpg"
+                                preload="none"
+                                controls
+                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <source src="assets/video/web-delivering-impact-ai.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h4>Delivering Impact through AI</h4>
+                        <p class="text-gray">How to implement AI solutions that drive real business value, from identifying the right use cases to measuring success and scaling adoption.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video 
+                                poster="assets/video/thumbnails/top-line-growth.jpg"
+                                preload="none"
+                                controls
+                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <source src="assets/video/web-top-line-growth.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h4>Demonstrating Top Line Growth</h4>
+                        <p class="text-gray">Proven approaches to showing measurable revenue impact through technology initiatives and operational improvements.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video 
+                                poster="assets/video/thumbnails/pe-stakeholder-value.jpg"
+                                preload="none"
+                                controls
+                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <source src="assets/video/web-pe-stakeholder-value.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h4>Demonstrating Value to PE Funds and Stakeholders</h4>
+                        <p class="text-gray">How to communicate and prove value to private equity stakeholders, including metrics that matter and presentation strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        <span style="margin-left: 1rem;">
+            <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
+        </span>
+    </footer>
+
+    <script>
+        // Enhanced video loading and interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.video-container video');
+            
+            videos.forEach(video => {
+                // Add loading state
+                video.addEventListener('loadstart', function() {
+                    this.style.opacity = '0.7';
+                });
+                
+                video.addEventListener('canplay', function() {
+                    this.style.opacity = '1';
+                });
+                
+                // Pause other videos when one starts playing
+                video.addEventListener('play', function() {
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== this && !otherVideo.paused) {
+                            otherVideo.pause();
+                        }
+                    });
+                });
+                
+                // Add hover effect for better UX
+                const container = video.closest('.video-card');
+                container.addEventListener('mouseenter', function() {
+                    if (video.paused) {
+                        video.style.transform = 'scale(1.02)';
+                    }
+                });
+                
+                container.addEventListener('mouseleave', function() {
+                    video.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

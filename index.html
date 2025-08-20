@@ -73,6 +73,99 @@
         .logo-carousel {
             width: 200%;
         }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container {
+            position: relative;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container video {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-container::before {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.6);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 4px;
+        }
+
+        .video-container:hover::before {
+            opacity: 1;
+        }
+
+        .video-container video:not([controls])::-webkit-media-controls {
+            display: none;
+        }
+
+        .video-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            line-height: 1.4;
+        }
+
+        .video-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .light-bg {
+            background-color: #f8fafc;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .video-card {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -83,6 +176,7 @@
             <nav aria-label="Main navigation">
                 <a href="#about">About</a>
                 <a href="services.html">Services</a>
+                <a href="insights.html">Insights</a>
                 <a href="contact.html">Contact</a>
                 <a href="blog.html">Blog</a>
             </nav>
@@ -112,6 +206,8 @@
                 </p>
             </div>
         </section>
+
+
 
 
 
@@ -173,6 +269,8 @@
             <a href="privacy-policy.html" style="color: #6b7280; font-size: 0.875rem;">Privacy Policy</a>
         </span>
     </footer>
+
+
 </body>
 
 </html>
