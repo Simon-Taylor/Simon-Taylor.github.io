@@ -19,9 +19,17 @@
     <style>
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .video-card.featured {
+            grid-column: span 2;
+        }
+
+        .video-card.featured .video-container video {
+            height: 400px !important;
         }
 
         .video-card {
@@ -102,8 +110,13 @@
                 gap: 1.5rem;
             }
             
-            .video-card {
+            .video-card, .video-card.featured {
+                grid-column: 1;
                 padding: 1rem;
+            }
+
+            .video-card.featured .video-container video {
+                height: 250px !important;
             }
         }
     </style>
@@ -130,16 +143,16 @@
             </p>
         </section>
 
-        <section class="dark-bg" style="padding: 4rem 0;">
+        <section class="dark-bg" style="padding: 2rem 0;">
             <div class="container content">
                 <div class="video-grid">
-                    <div class="video-card">
+                    <div class="video-card featured">
                         <div class="video-container">
                             <video 
                                 poster="assets/video/thumbnails/interim-leadership-ai.jpg"
                                 preload="none"
                                 controls
-                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px;">
                                 <source src="assets/video/web-interim-leadership-ai.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
