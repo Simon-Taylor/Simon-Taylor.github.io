@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting for Law Firms | SJT Digital</title>
+    <meta name="description"
+        content="Practical AI consulting, audits, and training for law firms. Help your practice adopt AI safely and profitably while maintaining compliance and client confidentiality.">
+    <meta name="keywords"
+        content="AI consulting law firms, legal AI audit, law firm AI training, AI implementation legal practices, AI compliance law firms, SJT Digital">
+    <meta name="author" content="Simon Taylor">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sjtdigital.com/ai-consulting-law-firms">
+    <meta property="og:title" content="AI Consulting for Law Firms | SJT Digital">
+    <meta property="og:description"
+        content="Practical AI consulting, audits, and training for law firms. Help your practice adopt AI safely and profitably.">
+    <meta property="og:image" content="/assets/sjt-digital.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sjtdigital.com/ai-consulting-law-firms">
+    <meta property="twitter:title" content="AI Consulting for Law Firms | SJT Digital">
+    <meta property="twitter:description"
+        content="Practical AI consulting, audits, and training for law firms. Help your practice adopt AI safely and profitably.">
+    <meta property="twitter:image" content="/assets/sjt-digital.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-carousel {
+            width: 200%;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            font-size: 1.5rem;
+        }
+
+        .service-card .price {
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive 2x2 grid */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        padding: 0;
+        }
+
+        .service-features li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            color: var(--accent-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            box-shadow: 0 2px 8px rgba(6, 182, 212, 0.15);
+            color: #f0f9ff;
+            text-decoration: none;
+        }
+
+        .pain-point {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .process-step .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--accent-primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .quote-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .hero-cta {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            box-shadow: 0 2px 8px rgba(6, 182, 212, 0.15);
+            color: #f0f9ff;
+            text-decoration: none;
+        }
+
+        .closing-cta {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .closing-cta h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .closing-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1><a href="/" style="text-decoration: none; color: inherit;">SJT Digital</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Your Competitors Are Already Using AI.<br>Is Your Firm Ready?</h2>
+                <p class="text-gray" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    Practical AI consulting for law firms who want to adopt AI safely, compliantly, and
+                    profitably—without the technical headaches.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- The Challenge Section -->
+        <section class="dark-bg">
+            <div class="container content">
+                <h2 style="text-align: center; margin-bottom: 3rem;">The Challenge Every Law Firm Faces</h2>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="pain-point">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">AI is everywhere, but where do
+                            you start?</h4>
+                        <p class="text-gray">Your associates are already using ChatGPT. Your competitors are investing
+                            in AI tools. But without a clear strategy, you risk compliance issues, wasted investment,
+                            and falling behind.</p>
+                    </div>
+
+                    <div class="pain-point">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">You're conservative by
+                            nature—and for good reason</h4>
+                        <p class="text-gray">Client confidentiality is paramount. Regulatory compliance is
+                            non-negotiable. You need AI solutions that respect these constraints, not Silicon Valley
+                            promises that ignore legal realities.</p>
+                    </div>
+
+                    <div class="pain-point">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">You don't have internal
+                            technologists</h4>
+                        <p class="text-gray">Your firm excels at law, not technology. You need practical guidance from
+                            someone who understands both the legal profession and AI implementation—not another vendor
+                            trying to sell you software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Fact Find Section -->
+        <section class="dark-bg">
+            <div class="container content">
+                <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                    <h2 style="margin-bottom: 1.5rem;">Start with a Free 30-Minute Fact Find</h2>
+                    <p class="text-gray" style="font-size: 1.1rem; margin-bottom: 2rem;">
+                        Not sure where to begin with AI? Book a no-obligation consultation where we'll discuss your
+                        firm's specific challenges, current technology setup, and identify the most practical AI
+                        opportunities for your practice.
+                    </p>
+
+                    <div
+                        style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 2rem; margin-bottom: 2rem;">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">What You'll Get:</h4>
+                        <ul style="text-align: left; max-width: 500px; margin: 0 auto; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                Honest assessment of AI readiness for your firm
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                Identification of quick wins and low-risk opportunities
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                Clear next steps tailored to your practice areas
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                No sales pitch—just practical advice you can use
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
+                        class="hero-cta" onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });"
+                        style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        Book Your Free Fact Find Call
+                    </a>
+
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        30 minutes • No obligation • Available within 48 hours
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Services Overview -->
+        <section class="content">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">How We Help Law Firms with AI</h2>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="services-grid"
+                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">AI Strategy & Audit</h4>
+                            <p class="text-gray">Assess your current setup and identify practical AI opportunities for
+                                your firm.</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">Training & Implementation
+                            </h4>
+                            <p class="text-gray">Get your team up to speed with hands-on training and safe usage
+                                guidelines.</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">Compliance & Security</h4>
+                            <p class="text-gray">Ensure AI adoption meets regulatory requirements and protects client
+                                confidentiality.</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem;">Private AI Solutions</h4>
+                            <p class="text-gray">Deploy secure, on-premises AI systems for firms with the highest
+                                confidentiality requirements.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <p class="text-gray" style="margin-bottom: 1.5rem;">
+                            Ready to explore how AI can help your firm? Start with a free fact-find call to discuss your
+                            specific needs.
+                        </p>
+                        <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
+                            class="hero-cta"
+                            onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });">
+                            Book Your Free Fact Find Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Trusted By Section -->
+        <section id="clients" class="content">
+            <div class="container content" style="text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
+                <div style="overflow: hidden; width: 100%; position: relative;">
+                    <div class="logo-carousel"
+                        style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
+                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/filtered.svg" alt="Filtered"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/renoir.svg" alt="Renoir Interim"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <!-- Duplicate logos for seamless loop -->
+                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/filtered.svg" alt="Filtered"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/strategies.svg" alt="Strategies"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/renoir.svg" alt="Renoir Interim"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/pp.svg" alt="PP"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                        <img src="assets/logos/xvr.svg" alt="XVR"
+                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        <span style="margin-left: 1rem;">
+            <a href="privacy-policy.html" style="color: var(--text-muted); font-size: 0.875rem;">Privacy Policy</a>
+        </span>
+    </footer>
+</body>
+
+</html>
