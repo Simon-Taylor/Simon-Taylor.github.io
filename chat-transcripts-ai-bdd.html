@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Transcripts, AI, and BDD: Escaping the Feature Factory Trap | SJT Digital</title>
+    <meta name="description"
+        content="How to use meeting transcripts, AI, and Behaviour Driven Development to transform product development from a feature factory into collaborative, value-driven engineering.">
+    <meta name="keywords"
+        content="BDD, behaviour driven development, AI transcripts, feature factory, agile development, product engineering, meeting transcripts, ChatGPT, Playwright, Gherkin">
+    <meta name="author" content="Simon Taylor">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sjtdigital.com/chat-transcripts-ai-bdd">
+    <meta property="og:title" content="Chat Transcripts, AI, and BDD: Escaping the Feature Factory Trap">
+    <meta property="og:description"
+        content="How to use meeting transcripts, AI, and Behaviour Driven Development to transform product development from a feature factory into collaborative, value-driven engineering.">
+    <meta property="og:image" content="/assets/sjt-digital.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sjtdigital.com/chat-transcripts-ai-bdd">
+    <meta property="twitter:title" content="Chat Transcripts, AI, and BDD: Escaping the Feature Factory Trap">
+    <meta property="twitter:description"
+        content="How to use meeting transcripts, AI, and Behaviour Driven Development to transform product development from a feature factory into collaborative, value-driven engineering.">
+    <meta property="twitter:image" content="/assets/sjt-digital.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1><a href="/" style="text-decoration: none; color: inherit;">SJT Digital</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="blog-list">
+            <article class="blog-post">
+                <h2>Chat Transcripts, AI, and BDD: Escaping the Feature Factory Trap</h2>
+                <p class="blog-meta"
+                    style="color: var(--text-secondary);font-size:0.98rem;margin-top:-1rem;margin-bottom:2rem;">By Simon
+                    Taylor &middot; Published 2nd September 2025</p>
+
+                <p>When I look back at some of the organisations I have worked in, especially larger ones in financial
+                    services, one pattern really stands out: the feature factory.</p>
+
+                <p>You probably know the setup. Product is a silo. Engineering is a silo. QA is a silo. Work is passed
+                    down the line. At some point someone decides that "we are agile now" and introduces scrum teams. But
+                    the dynamic does not really change.</p>
+
+                <p>The product owner turns up with "requirements." They are written as user stories, as an X, I want to
+                    Y, so that Z, with acceptance criteria written in Given/When/Then. At first glance, it looks modern,
+                    it looks agile. But peel it back and it is just the old requirements document wrapped up in new
+                    clothes.</p>
+
+                <p>I remember working with 30 page Word documents that detailed exactly how a system shall behave. Those
+                    became Jira tickets with story points. Developers were asked to size them (always a proxy for time),
+                    and then the game was: how fast can we burn through these? How accurate are our estimates? Being
+                    "good at estimation" was treated like the holy grail.</p>
+
+                <p>The problem is that nothing about this encouraged shared understanding, creativity, or real
+                    negotiation of value. We were still operating a production line, only now with stickies and burndown
+                    charts.</p>
+
+                <img src="assets/ai-bdd.png" alt="AI, BDD, and Chat Transcripts workflow diagram"
+                    style="display: block; max-width: 100%; margin: 2.5rem auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                <h2>From conversations to transcripts</h2>
+
+                <p>Fast forward to the way we work today. Most teams are remote or hybrid. Very few product
+                    conversations happen in a room with a whiteboard. They happen on Zoom, Teams, or Meet.</p>
+
+                <p>The great side effect is that those conversations can be captured. You can switch on subtitles. You
+                    can use meeting assistants like Fathom, which I have used extensively, or Granola. You can even just
+                    highlight and copy subtitles directly from Teams. And if all else fails, you can run the audio
+                    through Whisper, the open source speech to text model that can transcribe any recording with
+                    impressive accuracy.</p>
+
+                <p>In other words, you have a transcript of what was actually said. That transcript is gold.</p>
+
+                <p>Because once you have it, you can feed it into an AI model such as ChatGPT, Claude, or Copilot, and
+                    ask it to produce artefacts:</p>
+
+                <ul>
+                    <li>User stories with acceptance criteria</li>
+                    <li>A backlog summary</li>
+                    <li>Skeleton UI tests in Playwright or Selenium</li>
+                    <li>Even draft release notes</li>
+                </ul>
+
+                <p>The magic is simple. The AI just tells you what you told it, but in a structured, useful format.</p>
+
+                <h2>Why BDD fits perfectly here</h2>
+
+                <p>This is where Behaviour Driven Development (BDD) principles enter the picture.</p>
+
+                <p>People often lump BDD in with TDD (test driven development). But they are not the same thing. TDD is
+                    an engineering discipline: write a failing test, then write code until it passes. In practice, most
+                    teams do not do this strictly, though they may adopt the spirit of it.</p>
+
+                <p>BDD, on the other hand, is not really about testing at all. It is about collaboration. John Ferguson
+                    Smart defines it like this:</p>
+
+                <blockquote>
+                    <p>"BDD is a collaborative software development process focused on building a shared understanding
+                        of requirements through conversations around concrete examples and structured executable
+                        specifications, ultimately leading to higher quality, more valuable software."</p>
+                </blockquote>
+
+                <p>The key phrase there is "conversations around concrete examples."</p>
+
+                <p>Now, think about what happens in your refinement or planning sessions. Someone asks, "What happens if
+                    the user does this?" Someone else counters, "What if the API call fails here?" The tester jumps in,
+                    "Okay, but how are we going to verify that?"</p>
+
+                <p>That is BDD in action. And if you capture it in a transcript, you have the raw material to turn it
+                    into executable specifications.</p>
+
+                <h2>From transcript to automation</h2>
+
+                <p>Here is the workflow I propose:</p>
+
+                <ol style="list-style-position: outside; margin-left: 2rem; padding-left: 0;">
+                    <li style="margin-bottom: 1rem;"><strong>Start with a conversation starter.</strong> Product, or
+                        whoever is requesting, brings a rough idea, not a command but a request.</li>
+                    <li style="margin-bottom: 1rem;"><strong>Have the conversation.</strong> Developers, testers,
+                        product managers explore it together, surfacing edge cases and trade offs.</li>
+                    <li style="margin-bottom: 1rem;"><strong>Record and transcribe.</strong> Use Fathom, Granola, Teams
+                        subtitles, or Whisper. It does not matter how, just capture the words.</li>
+                    <li style="margin-bottom: 1rem;"><strong>Feed it to AI.</strong> Ask the model to generate user
+                        stories and draft test automation.</li>
+                    <li style="margin-bottom: 1rem;"><strong>Refine together.</strong> Humans review, adjust, and commit
+                        to scope. The automation is now part of the definition of done.</li>
+                </ol>
+
+                <p>Let us make this more concrete with an example.</p>
+
+                <h3>Transcript snippet (refinement call)</h3>
+
+                <div
+                    style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; position: relative;">
+                    <div
+                        style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary)); border-radius: 8px 0 0 8px;">
+                    </div>
+
+                    <div style="margin-left: 1rem;">
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: var(--accent-primary); font-size: 0.875rem;">Product Owner:</strong>
+                            <span style="color: var(--text-primary);">"Users need to be able to book onto a course from
+                                the course details page."</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: #10b981; font-size: 0.875rem;">Developer:</strong>
+                            <span style="color: var(--text-primary);">"Okay, what if the course is already full?"</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: var(--accent-primary); font-size: 0.875rem;">Product Owner:</strong>
+                            <span style="color: var(--text-primary);">"Then show a message: Course is full, please join
+                                the waitlist."</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: #f59e0b; font-size: 0.875rem;">Tester:</strong>
+                            <span style="color: var(--text-primary);">"Should the system actually add them to the
+                                waitlist automatically, or is that another step?"</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: var(--accent-primary); font-size: 0.875rem;">Product Owner:</strong>
+                            <span style="color: var(--text-primary);">"Yes, good point. Let us add them to the waitlist
+                                automatically, and confirm with a banner."</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: #10b981; font-size: 0.875rem;">Developer:</strong>
+                            <span style="color: var(--text-primary);">"What about prerequisites? Can someone book a
+                                course if they have not passed the required modules?"</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: var(--accent-primary); font-size: 0.875rem;">Product Owner:</strong>
+                            <span style="color: var(--text-primary);">"No, they should see an error message: You must
+                                complete prerequisites before booking."</span>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; margin-bottom: 0.75rem; align-items: start;">
+                            <strong style="color: #f59e0b; font-size: 0.875rem;">Tester:</strong>
+                            <span style="color: var(--text-primary);">"And if they have passed the prerequisites, and
+                                there is space, they get an instant confirmation?"</span>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 120px 1fr; gap: 0.75rem; align-items: start;">
+                            <strong style="color: var(--accent-primary); font-size: 0.875rem;">Product Owner:</strong>
+                            <span style="color: var(--text-primary);">"Exactly."</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>This is a much richer conversation. It includes the normal flow, alternative flows, and business
+                    rules.</p>
+
+                <h3>AI output (combined Gherkin + Playwright)</h3>
+
+                <div style="margin: 2rem 0;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <div
+                            style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; margin-right: 0.75rem;">
+                        </div>
+                        <p style="margin: 0; font-weight: 600; color: #374151;">Gherkin scenarios:</p>
+                    </div>
+                    <pre
+                        style="background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; overflow-x: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin: 0;"><code>Feature: Course Booking
+
+    Scenario: User books a course successfully 
+        Given a user has completed all prerequisites 
+        And the course has available spaces 
+        When the user clicks "Book this course" 
+        Then the user should see a confirmation message 
+        And the user should appear on the course attendee list
+
+    Scenario: Course is full 
+        Given a user has completed all prerequisites 
+        And the course has no available spaces 
+        When the user clicks "Book this course" 
+        Then the user should see "Course is full, please join the waitlist" 
+        And the user should be added to the waitlist
+
+    Scenario: User has not completed prerequisites 
+        Given a user has not completed the required modules 
+        When the user clicks "Book this course" 
+        Then the user should see "You must complete prerequisites before booking" 
+        And the booking should not be created</code></pre>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <div
+                            style="width: 12px; height: 12px; background: #3b82f6; border-radius: 50%; margin-right: 0.75rem;">
+                        </div>
+                        <p style="margin: 0; font-weight: 600; color: #374151;">Playwright test (one scenario):</p>
+                    </div>
+                    <pre
+                        style="background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; overflow-x: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin: 0;"><code>import { test, expect } from '@playwright/test';
+
+test.describe('Course Booking', () => {
+  test('should add user to waitlist when course is full', async ({ page }) => {
+    await page.goto('/courses/123?state=full');
+    await page.click('button#book-course');
+    
+    await expect(page.locator('.error-message'))
+      .toHaveText('Course is full, please join the waitlist');
+    
+    const waitlist = await page.locator('#waitlist li').allTextContents();
+    expect(waitlist).toContain('user@example.com');
+  });
+});</code></pre>
+                </div>
+
+                <h2>Why this matters</h2>
+
+                <p>Notice what happened. The conversation generated the requirements. The transcript preserved them. The
+                    AI transformed them into executable tests.</p>
+
+                <p>The tests now act as both documentation and guardrails. They describe what "done" looks like in a
+                    form the whole team can understand. Before a line of production code is written, the team already
+                    has executable specifications waiting to pass.</p>
+
+                <p>This is the heart of BDD. The transcript does not replace collaboration, it captures collaboration.
+                    And with AI, you can leapfrog from conversation to automation in one step.</p>
+
+                <h2>Why this is so powerful</h2>
+
+                <ul>
+                    <li><strong>It stops product from throwing requirements over the wall.</strong> Everything starts as
+                        a request, not a command.</li>
+                    <li><strong>It gives developers and testers a stronger voice:</strong> "How will we test this?" is
+                        baked into the process.</li>
+                    <li><strong>It automates the boring parts.</strong> AI handles formatting and skeleton code so
+                        humans can focus on value.</li>
+                    <li><strong>It moves teams away from the feature factory,</strong> towards negotiated, verifiable
+                        outcomes.</li>
+                </ul>
+
+                <p>I have seen teams spend hours rewriting notes into Jira tickets, debating story point estimates, and
+                    trying to remember what was said in refinement. With transcripts, AI, and BDD thinking, you shortcut
+                    that entire cycle. The conversation is the requirement. The transcript is the source of truth. The
+                    automation is the contract.</p>
+
+                <h2>Beyond product engineering</h2>
+
+                <p>This post has focused on product engineering, but the idea stretches much further. Customer
+                    interviews. Incident reviews. Sales calls. Anywhere you have recorded conversations, you can use
+                    transcripts and AI to generate artefacts that move you forward.</p>
+
+                <p>I plan to write more about this, perhaps a series on the power of transcripts. But if there is one
+                    thing to take away now, it is this:</p>
+
+                <p><strong>Do not waste your meeting transcripts. They are the richest artefact you have. Combine them
+                        with AI and BDD thinking, and you can transform the way your teams work.</strong></p>
+
+                <hr>
+
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    Published: February 2025 |
+                    <a href="contact.html" style="color: var(--accent-primary);">Get in touch</a> to discuss how AI can
+                    transform your development process
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
+        <span style="margin-left: 1rem;">
+            <a href="privacy-policy.html" style="color: var(--text-muted); font-size: 0.875rem;">Privacy Policy</a>
+        </span>
+    </footer>
+</body>
+
+</html>
