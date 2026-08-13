@@ -2,330 +2,58 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-GJ8NNXBM1Z');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Fact-Find | SJT Digital</title>
-    <meta name="description"
-        content="Book a free 30-minute call to explore where AI can actually help your business - without hype or pressure.">
-    <meta name="author" content="Simon Taylor">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sjtdigital.com/ai-fact-find">
-    <meta property="og:title" content="AI Fact-Find | SJT Digital">
-    <meta property="og:description"
-        content="Book a free 30-minute call to explore where AI can actually help your business - without hype or pressure.">
-    <meta property="og:image" content="/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sjtdigital.com/ai-fact-find">
-    <meta property="twitter:title" content="AI Fact-Find | SJT Digital">
-    <meta property="twitter:description"
-        content="Book a free 30-minute call to explore where AI can actually help your business - without hype or pressure.">
-    <meta property="twitter:image" content="/og-image.jpg">
-
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-
+    <meta http-equiv="refresh" content="0; url=https://sjtdigital.com/">
+    <link rel="canonical" href="https://sjtdigital.com/">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <title>SJT Digital</title>
+    <meta name="description" content="SJT Digital. AI product and engineering leadership for private equity portfolios.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:     #0b0c11;
+            --gold:   #c9a84c;
+            --white:  #f0efea;
+            --gray-1: #9fa1b2;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
-
-        header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .container {
-            max-width: 80rem;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .header-content {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.025em;
-        }
-
-        nav {
-            display: flex;
-            gap: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.875rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            padding: 5rem 0;
-        }
-
-        .hero {
+            justify-content: center;
+            padding: 2rem;
             text-align: center;
-            padding: 6rem 0 2rem 0;
         }
 
-        .hero h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            max-width: 48rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            max-width: 42rem;
-            margin: 0 auto;
-        }
-
-        .dark-bg {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .content {
-            max-width: 56rem;
-            margin: 0 auto;
-        }
-
-        .text-gray {
-            color: var(--text-secondary);
-        }
-
-        ul {
-            list-style-type: disc;
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
+        p {
+            color: var(--gray-1);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
         a {
-            color: white;
+            color: var(--gold);
             text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 0 0 2rem 0;
-        }
-
-        .cta-section p {
-            margin-bottom: 1rem;
-        }
-
-        .book-button {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 0.375rem;
             font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin: 2rem 0;
         }
 
-        .book-button:hover {
-            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
-            box-shadow: 0 2px 8px rgba(6, 182, 212, 0.15);
-            color: #f0f9ff;
-            box-shadow: 0 4px 16px rgba(6, 182, 212, 0.3);
-            text-decoration: none;
-        }
-
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="container header-content">
-            <h1><a href="/" style="text-decoration: none; color: inherit;">SJT Digital</a></h1>
-            <nav aria-label="Main navigation">
-                <a href="/#about">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-                <a href="tel:+447972377139" class="nav-phone">+44 7972 377139</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h2>Where can AI actually help your business - and where is it just noise?</h2>
-            <p class="text-gray">
-                In 30 minutes, you'll get clear, practical insight into where AI can (and can't) make a real impact in
-                your organisation - including GDPR-compliant, self-hosted solutions that keep your data secure.
-            </p>
-        </section>
-
-        <section class="cta-section">
-            <div class="container content">
-                <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
-                    class="book-button" onclick="gtag('event', 'generate_lead', { 'currency': 'GBP', 'value': 0 });">
-                    Book Your Free 30-Minute Call
-                </a>
-                <p class="text-gray">
-                    Not sure yet? Drop me a line at <a href="mailto:info@sjtdigital.com"
-                        onclick="gtag('event', 'contact', { 'method': 'email' });">info@sjtdigital.com</a> - happy to
-                    answer questions before you book.
-                </p>
-            </div>
-        </section>
-
-        <section class="dark-bg">
-            <div class="container content">
-                <h3>This free call is ideal if:</h3>
-                <ul class="text-gray">
-                    <li>You're hearing about AI everywhere - but not sure what applies to your business</li>
-                    <li>You're curious, but not technical - and don't want to waste time or budget</li>
-                    <li>You've been pitched AI solutions, but nothing felt actionable or aligned with how your team
-                        works</li>
-                    <li>You want someone independent, not a vendor trying to sell you a tool</li>
-                    <li>You need AI solutions that comply with GDPR and keep your data secure</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div class="container content">
-                <h3>What we'll cover:</h3>
-                <ul class="text-gray">
-                    <li>Your current business challenges and where AI might help</li>
-                    <li>Real-world examples of AI implementation in similar organisations</li>
-                    <li>Options for self-hosted, GDPR-compliant AI solutions</li>
-                    <li>Practical next steps if you decide to move forward</li>
-                    <li>Clear guidance on what to avoid and common pitfalls</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="dark-bg">
-            <div class="container content">
-                <h3>Why me?</h3>
-                <p class="text-gray">
-                    I've helped organisations like LearnPro Group implement secure, self-hosted AI solutions to reduce
-                    overhead, automate support, and modernise operations - with clear business value and full GDPR
-                    compliance.
-                </p>
-            </div>
-        </section>
-
-
-
-        <section id="clients" class="dark-bg">
-            <div class="container content" style="text-align: center;">
-                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
-                <div style="overflow: hidden; width: 100%; position: relative;">
-                    <div class="logo-carousel"
-                        style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
-                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/filtered.svg" alt="Filtered"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/strategies.svg" alt="Strategies"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/renoir.svg" alt="Renoir Interim"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pp.svg" alt="PP"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/xvr.svg" alt="XVR"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/civica.svg" alt="Civica"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <!-- Duplicate logos for seamless loop -->
-                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/filtered.svg" alt="Filtered"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/strategies.svg" alt="Strategies"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pdrpro.svg" alt="pdrPro"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/renoir.svg" alt="Renoir Interim"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/learnpro.svg" alt="LearnPro"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/firewatch.svg" alt="FireWatch"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pp.svg" alt="PP"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/xvr.svg" alt="XVR"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/civica.svg" alt="Civica"
-                            style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy;
-        <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
-        <span style="margin-left: 1rem;">
-            <a href="privacy-policy.html" style="color: var(--text-muted); font-size: 0.875rem;">Privacy Policy</a>
-        </span>
-    </footer>
+    <div>
+        <p>This page has moved.</p>
+        <p><a href="https://sjtdigital.com/">Continue to sjtdigital.com</a></p>
+    </div>
+    <script>window.location.replace("https://sjtdigital.com/");</script>
 </body>
 
 </html>

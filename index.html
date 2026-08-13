@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SJT Digital | AI Product & Engineering Leadership for PE Portfolios</title>
     <meta name="description"
-        content="Helping private equity firms work out where AI creates value across their portfolios  - then deliver it. Discovery, roadmapping, and hands-on execution.">
+        content="Helping private equity firms work out where AI creates value across their portfolios, then deliver it. Roadmapping, portfolio AI assurance, and hands-on build.">
     <meta name="author" content="Simon Taylor">
 
     <!-- Open Graph -->
@@ -23,14 +23,14 @@
     <meta property="og:url" content="https://sjtdigital.com">
     <meta property="og:title" content="SJT Digital | AI Product & Engineering Leadership for PE Portfolios">
     <meta property="og:description"
-        content="I help PE firms work out where AI creates value across their portfolios  - then deliver it. Discovery, roadmapping, and hands-on execution.">
+        content="I help PE firms work out where AI creates value across their portfolios, then deliver it. Roadmap where that is what's needed, working software where it isn't.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sjtdigital.com">
     <meta property="twitter:title" content="SJT Digital | AI Product & Engineering Leadership for PE Portfolios">
     <meta property="twitter:description"
-        content="I help PE firms work out where AI creates value across their portfolios  - then deliver it. Discovery, roadmapping, and hands-on execution.">
+        content="I help PE firms work out where AI creates value across their portfolios, then deliver it. Roadmap where that is what's needed, working software where it isn't.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,11 +131,11 @@
 
         /* ─── HERO ─── */
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: calc(var(--nav-h) + 5rem) 2rem 6rem;
+            padding: calc(var(--nav-h) + 5rem) 2rem 3.5rem;
             max-width: var(--max-w);
             margin: 0 auto;
         }
@@ -200,26 +200,6 @@
         .hero-tel:hover { color: var(--white); }
         .hero-tel strong { color: var(--white); font-weight: 500; }
 
-        .hero-scroll {
-            margin-top: 5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .hero-scroll-line {
-            width: 40px;
-            height: 1px;
-            background: var(--border);
-        }
-
-        .hero-scroll span {
-            font-size: 0.7rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--gray-2);
-        }
-
         /* ─── SHARED ─── */
         section {
             padding: 8rem 2rem;
@@ -269,12 +249,46 @@
         }
 
         /* ─── CASE STUDIES ─── */
+        .case-study-feature {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 3.5rem;
+            border: 1px solid var(--border);
+            padding: 3rem 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .cs-feature-findings {
+            margin-top: 1.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .cs-finding p {
+            font-size: 0.8rem;
+            color: var(--gray-1);
+            line-height: 1.65;
+            font-weight: 300;
+        }
+
+        .cs-finding strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+
         .case-studies {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5px;
             background: var(--border);
-            margin-top: 3.5rem;
+            margin-top: 1.5rem;
         }
 
         .case-study {
@@ -490,6 +504,17 @@
                 grid-template-columns: 1fr;
             }
 
+            .case-study-feature {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2.5rem 1.75rem;
+            }
+
+            .cs-feature-findings {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .steps {
                 grid-template-columns: 1fr;
             }
@@ -540,8 +565,8 @@
             <h1>Protect Your Investment.<br>AI-Enable Your Portfolio.</h1>
             <p class="hero-sub">
                 I help PE firms work out where AI actually creates value across their
-                portfolios  - then deliver it. Discovery, roadmapping, and hands-on
-                execution. Not slides. Working results.
+                portfolios, then deliver it. Roadmap where that is what's needed,
+                working software where it isn't. I still write the code.
             </p>
             <div class="hero-ctas">
                 <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
@@ -550,10 +575,6 @@
                     Book a Call
                 </a>
                 <a href="tel:+447972377139" class="hero-tel">or call <strong>+44 7972 377139</strong></a>
-            </div>
-            <div class="hero-scroll">
-                <div class="hero-scroll-line"></div>
-                <span>Scroll</span>
             </div>
         </div>
 
@@ -575,7 +596,41 @@
         <section>
             <div class="container">
                 <p class="section-label">Case Studies</p>
-                <h2>Done inside a PE-backed software company.<br>Not a methodology: two experiments that shipped.</h2>
+                <h2>Done inside PE-backed businesses.<br>And for the funds that own them.</h2>
+
+                <div class="case-study-feature">
+                    <div>
+                        <p class="cs-label">Portfolio AI Validation</p>
+                        <div class="cs-stat">18 <em>cos</em></div>
+                        <p class="cs-context">Assessed in four weeks</p>
+                    </div>
+                    <div>
+                        <p class="cs-desc">
+                            A mid-market fund had collected AI self-assessments from every company it
+                            owned. The returns looked reassuring, which was the problem: the people
+                            reporting progress were the people being measured on it, and nothing had
+                            been checked from the outside.
+                        </p>
+                        <p class="cs-desc">
+                            Each holding was reassessed independently against public evidence, product
+                            claims, hiring signals and technical footprint, then triangulated against
+                            what the company had reported about itself. Most of the portfolio stood up.
+                            <strong style="color: var(--white); font-weight: 500;">The value was in the
+                            handful that did not.</strong>
+                        </p>
+                        <div class="cs-feature-findings">
+                            <div class="cs-finding">
+                                <p><strong>5</strong>holdings where the self-reported AI position was corroborated by no external evidence at all.</p>
+                            </div>
+                            <div class="cs-finding">
+                                <p><strong>1</strong>reporting AI progress while revenue had reportedly fallen by around two-thirds.</p>
+                            </div>
+                            <div class="cs-finding">
+                                <p><strong>2</strong>that did not trace to a named fund vehicle, raising a scope question nobody had asked.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="case-studies">
 
@@ -630,9 +685,10 @@
                 </div>
 
                 <p class="cs-footnote">
-                    Both projects ran inside the same PE-backed enterprise software company.
-                    Both used Claude Code as the primary development tool.
-                    Neither required additional headcount. Both are live in production.
+                    The two delivery experiments ran inside the same PE-backed enterprise software
+                    company. Both used Claude Code as the primary development tool. Neither required
+                    additional headcount. Both are live in production. Portfolio and holding names
+                    are withheld throughout.
                 </p>
             </div>
         </section>
@@ -679,6 +735,9 @@
                             I'm a fractional CTPO with over 20 years in product and engineering leadership across
                             PE-backed businesses, scale-ups, and enterprise. I've held the line between investor
                             expectations and engineering reality, and I know what both sides need to hear.
+                            <strong style="color: var(--white); font-weight: 500;">I am also still building.</strong>
+                            I work in Claude Code every day, and a good deal of what I deliver is software rather
+                            than advice.
                         </p>
                         <p>
                             Most recently at a Blackstone portfolio company, I ran two AI delivery

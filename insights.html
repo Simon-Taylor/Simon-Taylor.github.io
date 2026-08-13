@@ -1,355 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GJ8NNXBM1Z');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights | SJT Digital</title>
-    <meta name="description" content="Watch key insights from Simon Taylor's work with PE-backed businesses, AI implementation, and delivering measurable growth.">
-    <meta name="author" content="Simon Taylor">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="assets/style.css">
+    <meta http-equiv="refresh" content="0; url=https://sjtdigital.com/">
+    <link rel="canonical" href="https://sjtdigital.com/">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <title>SJT Digital</title>
+    <meta name="description" content="SJT Digital. AI product and engineering leadership for private equity portfolios.">
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:     #0b0c11;
+            --gold:   #c9a84c;
+            --white:  #f0efea;
+            --gray-1: #9fa1b2;
+        }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-        }
-
-        .dark-bg {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-        }
-
-        .text-gray {
-            color: var(--text-secondary);
-        }
-
-        .hero h2 {
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: 700;
-        }
-
-        nav a {
-            color: var(--text-secondary);
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent-primary);
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .video-card.featured {
-            grid-column: span 2;
-        }
-
-        .video-card.featured .video-container video {
-            height: 400px !important;
-        }
-
-        .video-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .video-card:hover {
-            border-color: var(--border-color);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(159, 122, 234, 0.2);
-        }
-
-        .video-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .video-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-        }
-
-        .video-container {
-            position: relative;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .video-container video {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            cursor: pointer;
-        }
-
-        .video-container::before {
-            content: '▶';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2.5rem;
-            color: white;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            z-index: 1;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 4px;
+            padding: 2rem;
+            text-align: center;
         }
 
-        .video-container:hover::before {
-            opacity: 1;
+        p {
+            color: var(--gray-1);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
-        .video-card h4 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent-primary);
-            line-height: 1.4;
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        .video-card p {
-            margin: 0;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: var(--text-secondary);
-        }
-
-        .video-container video:not([controls])::-webkit-media-controls {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .video-card, .video-card.featured {
-                grid-column: 1;
-                padding: 1rem;
-            }
-
-            .video-card.featured .video-container video {
-                height: 250px !important;
-            }
-        }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container header-content">
-            <h1><a href="/" style="text-decoration: none; color: inherit;">SJT Digital</a></h1>
-            <nav aria-label="Main navigation">
-                <a href="/#about">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-                <a href="tel:+447972377139" class="nav-phone">+44 7972 377139</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h2>Insights & Expertise</h2>
-            <p class="text-gray">
-                Watch key insights from my work with PE-backed businesses, AI implementation, and delivering measurable growth. These videos showcase practical approaches to common challenges in technology leadership and business transformation.
-            </p>
-        </section>
-
-        <section class="dark-bg" style="padding: 2rem 0;">
-            <div class="container content">
-                <div class="video-grid">
-                    <div class="video-card featured">
-                        <div class="video-container">
-                            <video 
-                                poster="assets/video/thumbnails/interim-leadership-ai.jpg"
-                                preload="none"
-                                controls
-                                style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px;">
-                                <source src="assets/video/web-interim-leadership-ai.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <h4>Interim Leadership Meets Practical AI</h4>
-                        <p class="text-gray">Insights on combining interim leadership expertise with practical AI implementation to drive business transformation and value creation.</p>
-                    </div>
-                    <div class="video-card">
-                        <div class="video-container">
-                            <video 
-                                poster="assets/video/thumbnails/advice-interim-engineers.jpg"
-                                preload="none"
-                                controls
-                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                <source src="assets/video/web-advice-interim-engineers.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <h4>Advice to Interim Engineers in PE Backed Businesses</h4>
-                        <p class="text-gray">Key strategies for interim engineers working in private equity environments, including how to navigate stakeholder expectations and deliver rapid value.</p>
-                    </div>
-                    <div class="video-card">
-                        <div class="video-container">
-                            <video 
-                                poster="assets/video/thumbnails/delivering-impact-ai.jpg"
-                                preload="none"
-                                controls
-                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                <source src="assets/video/web-delivering-impact-ai.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <h4>Delivering Impact through AI</h4>
-                        <p class="text-gray">How to implement AI solutions that drive real business value, from identifying the right use cases to measuring success and scaling adoption.</p>
-                    </div>
-                    <div class="video-card">
-                        <div class="video-container">
-                            <video 
-                                poster="assets/video/thumbnails/top-line-growth.jpg"
-                                preload="none"
-                                controls
-                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                <source src="assets/video/web-top-line-growth.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <h4>Demonstrating Top Line Growth</h4>
-                        <p class="text-gray">Proven approaches to showing measurable revenue impact through technology initiatives and operational improvements.</p>
-                    </div>
-                    <div class="video-card">
-                        <div class="video-container">
-                            <video 
-                                poster="assets/video/thumbnails/pe-stakeholder-value.jpg"
-                                preload="none"
-                                controls
-                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                                <source src="assets/video/web-pe-stakeholder-value.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <h4>Demonstrating Value to PE Funds and Stakeholders</h4>
-                        <p class="text-gray">How to communicate and prove value to private equity stakeholders, including metrics that matter and presentation strategies.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="clients" class="dark-bg" style="border-top: 1px solid var(--border-color);">
-            <div class="container content" style="text-align: center;">
-                <h3 style="margin-bottom: 2rem;">Trusted by</h3>
-                <div style="overflow: hidden; width: 100%; position: relative;">
-                    <div class="logo-carousel" style="display: flex; align-items: center; animation: slide 36s linear infinite; opacity: 0.7;">
-                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/filtered.svg" alt="Filtered" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/strategies.svg" alt="Strategies" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pdrpro.svg" alt="pdrPro" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/renoir.svg" alt="Renoir Interim" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/learnpro.svg" alt="LearnPro" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/firewatch.svg" alt="FireWatch" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pp.svg" alt="PP" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/xvr.svg" alt="XVR" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/civica.svg" alt="Civica" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <!-- Duplicate logos for seamless loop -->
-                        <img src="assets/logos/learnpro-group.svg" alt="LearnPro Group" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/filtered.svg" alt="Filtered" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/strategies.svg" alt="Strategies" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pdrpro.svg" alt="pdrPro" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/renoir.svg" alt="Renoir Interim" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/learnpro.svg" alt="LearnPro" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/firewatch.svg" alt="FireWatch" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/pp.svg" alt="PP" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/xvr.svg" alt="XVR" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                        <img src="assets/logos/civica.svg" alt="Civica" style="height: 40px; filter: brightness(0) invert(1); margin: 0 3rem; flex-shrink: 0;">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy; <script>document.write(new Date().getFullYear())</script> SJT Digital. All rights reserved.
-        <span style="margin-left: 1rem;">
-            <a href="privacy-policy.html" style="color: var(--text-muted); font-size: 0.875rem;">Privacy Policy</a>
-        </span>
-    </footer>
-
-    <script>
-        // Enhanced video loading and interaction
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('.video-container video');
-            
-            videos.forEach(video => {
-                // Add loading state
-                video.addEventListener('loadstart', function() {
-                    this.style.opacity = '0.7';
-                });
-                
-                video.addEventListener('canplay', function() {
-                    this.style.opacity = '1';
-                });
-                
-                // Pause other videos when one starts playing
-                video.addEventListener('play', function() {
-                    videos.forEach(otherVideo => {
-                        if (otherVideo !== this && !otherVideo.paused) {
-                            otherVideo.pause();
-                        }
-                    });
-                });
-                
-                // Add hover effect for better UX
-                const container = video.closest('.video-card');
-                container.addEventListener('mouseenter', function() {
-                    if (video.paused) {
-                        video.style.transform = 'scale(1.02)';
-                    }
-                });
-                
-                container.addEventListener('mouseleave', function() {
-                    video.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
+    <div>
+        <p>This page has moved.</p>
+        <p><a href="https://sjtdigital.com/">Continue to sjtdigital.com</a></p>
+    </div>
+    <script>window.location.replace("https://sjtdigital.com/");</script>
 </body>
+
 </html>
