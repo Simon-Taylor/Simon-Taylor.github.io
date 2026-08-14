@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="SJT Digital">
+  <title>SJT Digital — 16px favicon</title>
+  <!-- The Bracket. Brass rules are rectangles, not glyphs, so the mark survives
+     one-colour print and 16px. Requires IBM Plex Mono; convert text to paths
+     before sending anywhere the font is not installed. -->
+  <rect width="16" height="16" fill="#0B0C11"/>
+  <rect x="2.3" y="4" width="1" height="8" fill="#B8963F"/>
+  <rect x="12.7" y="4" width="1" height="8" fill="#B8963F"/>
+  <text x="5.3" y="11.6" font-family="'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="9" font-weight="500" fill="#F0EFEA">S</text>
+</svg>

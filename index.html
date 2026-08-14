@@ -11,7 +11,8 @@
         gtag('config', 'G-GJ8NNXBM1Z');
     </script>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SJT Digital | AI Product & Engineering Leadership for PE Portfolios</title>
     <meta name="description"
@@ -34,7 +35,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
     <style>
@@ -47,11 +48,11 @@
         :root {
             --bg:       #0b0c11;
             --bg-card:  #111419;
-            --gold:     #c9a84c;
-            --gold-dim: rgba(201, 168, 76, 0.15);
-            --white:    #f0efea;
-            --gray-1:   #9fa1b2;
-            --gray-2:   #58596a;
+            --brass:    #B8963F;
+            --brass-dim: rgba(184, 150, 63, 0.15);
+            --paper:    #F0EFEA;
+            --slate:    #9FA1B2;
+            --slate-dim:#58596A;
             --border:   #1d1f2c;
             --max-w:    1080px;
             --nav-h:    68px;
@@ -60,9 +61,9 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
             background: var(--bg);
-            color: var(--white);
+            color: var(--paper);
             line-height: 1.6;
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
@@ -98,13 +99,43 @@
         }
 
         .nav-logo {
-            font-size: 0.875rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--white);
+            display: inline-flex;
+            align-items: stretch;
+            gap: 8px;
             text-decoration: none;
         }
+
+        .nav-logo .bracket {
+            width: 2px;
+            background: var(--brass);
+        }
+
+        .nav-logo .lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 3px 0;
+        }
+
+        .nav-logo .sjt {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            color: var(--paper);
+        }
+
+        .nav-logo .digital {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.5rem;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--slate);
+        }
+
+        .nav-logo:hover .digital { color: var(--paper); }
 
         .nav-links {
             display: flex;
@@ -115,16 +146,16 @@
 
         .nav-links a {
             font-size: 0.8rem;
-            color: var(--gray-1);
+            color: var(--slate);
             text-decoration: none;
             letter-spacing: 0.02em;
             transition: color 0.2s;
         }
 
-        .nav-links a:hover { color: var(--white); }
+        .nav-links a:hover { color: var(--paper); }
 
         .nav-phone {
-            color: var(--gold) !important;
+            color: var(--brass) !important;
             font-weight: 500;
             font-size: 0.85rem !important;
         }
@@ -141,11 +172,12 @@
         }
 
         .overline {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 2rem;
         }
 
@@ -154,14 +186,14 @@
             font-weight: 700;
             line-height: 1.05;
             letter-spacing: -0.03em;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 2rem;
             max-width: 16ch;
         }
 
         .hero-sub {
             font-size: 1.1rem;
-            color: var(--gray-1);
+            color: var(--slate);
             max-width: 500px;
             line-height: 1.75;
             margin-bottom: 3rem;
@@ -177,7 +209,7 @@
 
         .btn {
             display: inline-block;
-            background: var(--gold);
+            background: var(--brass);
             color: #0b0c11;
             padding: 0.9rem 2rem;
             border-radius: 3px;
@@ -192,13 +224,13 @@
 
         .hero-tel {
             font-size: 1rem;
-            color: var(--gray-1);
+            color: var(--slate);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .hero-tel:hover { color: var(--white); }
-        .hero-tel strong { color: var(--white); font-weight: 500; }
+        .hero-tel:hover { color: var(--paper); }
+        .hero-tel strong { color: var(--paper); font-weight: 500; }
 
         /* ─── SHARED ─── */
         section {
@@ -212,11 +244,12 @@
         }
 
         .section-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 2rem;
         }
 
@@ -225,7 +258,7 @@
             font-weight: 700;
             line-height: 1.15;
             letter-spacing: -0.025em;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 1.5rem;
         }
 
@@ -237,14 +270,14 @@
 
         .thesis-body p {
             font-size: 1.05rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.85;
             margin-bottom: 1.25rem;
             font-weight: 300;
         }
 
         .thesis-body p strong {
-            color: var(--white);
+            color: var(--paper);
             font-weight: 500;
         }
 
@@ -269,7 +302,7 @@
 
         .cs-finding p {
             font-size: 0.8rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.65;
             font-weight: 300;
         }
@@ -279,7 +312,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 0.4rem;
         }
 
@@ -297,11 +330,12 @@
         }
 
         .cs-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 1.75rem;
         }
 
@@ -310,28 +344,29 @@
             font-weight: 700;
             letter-spacing: -0.04em;
             line-height: 1;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 0.4rem;
         }
 
         .cs-stat em {
-            color: var(--gold);
+            color: var(--brass);
             font-style: normal;
             font-size: 2.25rem;
         }
 
         .cs-context {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.72rem;
             font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--gray-2);
+            color: var(--slate-dim);
             margin-bottom: 2rem;
         }
 
         .cs-desc {
             font-size: 0.9rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.8;
             margin-bottom: 0.9rem;
             font-weight: 300;
@@ -344,7 +379,7 @@
             padding: 1.5rem 2rem;
             border: 1px solid var(--border);
             font-size: 0.8rem;
-            color: var(--gray-2);
+            color: var(--slate-dim);
             font-style: italic;
             line-height: 1.65;
         }
@@ -364,25 +399,26 @@
         }
 
         .step-num {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 1rem;
         }
 
         .step h4 {
             font-size: 1rem;
             font-weight: 600;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 0.6rem;
             letter-spacing: -0.01em;
         }
 
         .step p {
             font-size: 0.875rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.7;
             font-weight: 300;
         }
@@ -408,14 +444,14 @@
 
         .about-body p {
             font-size: 1rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.8;
             margin-bottom: 1.1rem;
             font-weight: 300;
         }
 
         .about-body p strong {
-            color: var(--white);
+            color: var(--paper);
             font-weight: 500;
         }
 
@@ -432,7 +468,7 @@
         }
 
         .cta-section > .container > p {
-            color: var(--gray-1);
+            color: var(--slate);
             font-size: 1rem;
             max-width: 44ch;
             margin: 0 auto 3.5rem;
@@ -451,18 +487,19 @@
             font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 700;
             letter-spacing: -0.03em;
-            color: var(--white);
+            color: var(--paper);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .tel-headline:hover { color: var(--gold); }
+        .tel-headline:hover { color: var(--brass); }
 
         .divider-text {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.7rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--gray-2);
+            color: var(--slate-dim);
         }
 
         /* ─── FOOTER ─── */
@@ -481,7 +518,7 @@
 
         footer p {
             font-size: 0.78rem;
-            color: var(--gray-2);
+            color: var(--slate-dim);
         }
 
         .footer-links {
@@ -491,12 +528,12 @@
 
         .footer-links a {
             font-size: 0.78rem;
-            color: var(--gray-2);
+            color: var(--slate-dim);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--gray-1); }
+        .footer-links a:hover { color: var(--slate); }
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 800px) {
@@ -547,7 +584,14 @@
 
     <nav id="site-nav">
         <div class="nav-inner">
-            <a href="/" class="nav-logo">SJT Digital</a>
+            <a href="/" class="nav-logo" aria-label="SJT Digital">
+                <span class="bracket"></span>
+                <span class="lockup">
+                    <span class="sjt">SJT</span>
+                    <span class="digital">Digital</span>
+                </span>
+                <span class="bracket"></span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -615,7 +659,7 @@
                             Each holding was reassessed independently against public evidence, product
                             claims, hiring signals and technical footprint, then triangulated against
                             what the company had reported about itself. Most of the portfolio stood up.
-                            <strong style="color: var(--white); font-weight: 500;">The value was in the
+                            <strong style="color: var(--paper); font-weight: 500;">The value was in the
                             handful that did not.</strong>
                         </p>
                         <div class="cs-feature-findings">
@@ -648,7 +692,7 @@
                         <p class="cs-desc">
                             It delivered. On time. To strong customer reception. But the more important finding
                             wasn't the speed. It was the proof that the real constraint in large enterprises is
-                            rarely capability. <strong style="color: var(--white); font-weight: 500;">It is structure.</strong>
+                            rarely capability. <strong style="color: var(--paper); font-weight: 500;">It is structure.</strong>
                             Strip away the governance layers, the approval bottlenecks, the committee-driven
                             prioritisation. A small team with AI tools can move at a pace that rewrites
                             the business case for how software gets built.
@@ -676,7 +720,7 @@
                             infrastructure. Enterprise-grade from day one.
                         </p>
                         <p class="cs-desc">
-                            Total additional cost: <strong style="color: var(--white); font-weight: 500;">£360</strong>,
+                            Total additional cost: <strong style="color: var(--paper); font-weight: 500;">£360</strong>,
                             one month's AI tooling subscription. The developer was already on payroll.
                             No contractors, no project manager, no QA cycle, no DevOps setup fee.
                         </p>
@@ -735,7 +779,7 @@
                             I'm a fractional CTPO with over 20 years in product and engineering leadership across
                             PE-backed businesses, scale-ups, and enterprise. I've held the line between investor
                             expectations and engineering reality, and I know what both sides need to hear.
-                            <strong style="color: var(--white); font-weight: 500;">I am also still building.</strong>
+                            <strong style="color: var(--paper); font-weight: 500;">I am also still building.</strong>
                             I work in Claude Code every day, and a good deal of what I deliver is software rather
                             than advice.
                         </p>
@@ -748,7 +792,7 @@
                             the cost of a monthly subscription.
                         </p>
                         <p>
-                            Both projects pointed to the same pattern: <strong style="color: var(--white); font-weight: 500;">in most organisations,
+                            Both projects pointed to the same pattern: <strong style="color: var(--paper); font-weight: 500;">in most organisations,
                             capability is rarely the bottleneck.</strong> Structure, process, and accumulated
                             organisational friction usually are. I know how to assess where a company actually
                             sits, build a realistic roadmap, reduce the friction, and construct the investor

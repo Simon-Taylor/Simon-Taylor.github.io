@@ -11,7 +11,8 @@
         gtag('config', 'G-GJ8NNXBM1Z');
     </script>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | SJT Digital</title>
     <meta name="description"
@@ -34,7 +35,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
     <style>
@@ -47,11 +48,11 @@
         :root {
             --bg:       #0b0c11;
             --bg-card:  #111419;
-            --gold:     #c9a84c;
-            --gold-dim: rgba(201, 168, 76, 0.15);
-            --white:    #f0efea;
-            --gray-1:   #9fa1b2;
-            --gray-2:   #58596a;
+            --brass:    #B8963F;
+            --brass-dim: rgba(184, 150, 63, 0.15);
+            --paper:    #F0EFEA;
+            --slate:    #9FA1B2;
+            --slate-dim:#58596A;
             --border:   #1d1f2c;
             --max-w:    1080px;
             --nav-h:    68px;
@@ -60,9 +61,9 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
             background: var(--bg);
-            color: var(--white);
+            color: var(--paper);
             line-height: 1.6;
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
@@ -103,13 +104,43 @@
         }
 
         .nav-logo {
-            font-size: 0.875rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--white);
+            display: inline-flex;
+            align-items: stretch;
+            gap: 8px;
             text-decoration: none;
         }
+
+        .nav-logo .bracket {
+            width: 2px;
+            background: var(--brass);
+        }
+
+        .nav-logo .lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 3px 0;
+        }
+
+        .nav-logo .sjt {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            color: var(--paper);
+        }
+
+        .nav-logo .digital {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.5rem;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--slate);
+        }
+
+        .nav-logo:hover .digital { color: var(--paper); }
 
         .nav-links {
             display: flex;
@@ -120,17 +151,17 @@
 
         .nav-links a {
             font-size: 0.8rem;
-            color: var(--gray-1);
+            color: var(--slate);
             text-decoration: none;
             letter-spacing: 0.02em;
             transition: color 0.2s;
         }
 
-        .nav-links a:hover { color: var(--white); }
-        .nav-links a.current { color: var(--white); }
+        .nav-links a:hover { color: var(--paper); }
+        .nav-links a.current { color: var(--paper); }
 
         .nav-phone {
-            color: var(--gold) !important;
+            color: var(--brass) !important;
             font-weight: 500;
             font-size: 0.85rem !important;
         }
@@ -143,11 +174,12 @@
         }
 
         .overline {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 2rem;
         }
 
@@ -156,14 +188,14 @@
             font-weight: 700;
             line-height: 1.05;
             letter-spacing: -0.03em;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 2rem;
             max-width: 16ch;
         }
 
         .page-hero-sub {
             font-size: 1.15rem;
-            color: var(--gray-1);
+            color: var(--slate);
             max-width: 560px;
             line-height: 1.75;
             font-weight: 300;
@@ -196,11 +228,12 @@
         .channel:last-child { padding-right: 0; }
 
         .channel-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 1.5rem;
         }
 
@@ -208,7 +241,7 @@
             font-size: 1.35rem;
             font-weight: 700;
             letter-spacing: -0.025em;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 0.85rem;
         }
 
@@ -218,11 +251,11 @@
             transition: color 0.2s;
         }
 
-        .channel h3 a:hover { color: var(--gold); }
+        .channel h3 a:hover { color: var(--brass); }
 
         .channel p {
             font-size: 0.875rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.75;
             font-weight: 300;
             margin-bottom: 1.75rem;
@@ -232,7 +265,7 @@
 
         .btn {
             display: inline-block;
-            background: var(--gold);
+            background: var(--brass);
             color: #0b0c11;
             padding: 0.9rem 2rem;
             border-radius: 3px;
@@ -257,11 +290,12 @@
         }
 
         .section-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--brass);
             margin-bottom: 2rem;
         }
 
@@ -270,7 +304,7 @@
             font-weight: 700;
             line-height: 1.15;
             letter-spacing: -0.025em;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 1.5rem;
         }
 
@@ -281,7 +315,7 @@
 
         .body-copy p {
             font-size: 1.05rem;
-            color: var(--gray-1);
+            color: var(--slate);
             line-height: 1.85;
             margin-bottom: 1.25rem;
             font-weight: 300;
@@ -290,18 +324,18 @@
         .body-copy p:last-child { margin-bottom: 0; }
 
         .body-copy p strong {
-            color: var(--white);
+            color: var(--paper);
             font-weight: 500;
         }
 
         .body-copy a {
-            color: var(--gold);
+            color: var(--brass);
             text-decoration: none;
-            border-bottom: 1px solid var(--gold-dim);
+            border-bottom: 1px solid var(--brass-dim);
             transition: border-color 0.2s;
         }
 
-        .body-copy a:hover { border-color: var(--gold); }
+        .body-copy a:hover { border-color: var(--brass); }
 
         /* ─── DETAILS ─── */
         .details {
@@ -320,16 +354,17 @@
         }
 
         .detail-key {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--gray-2);
+            color: var(--slate-dim);
         }
 
         .detail-val {
             font-size: 0.95rem;
-            color: var(--gray-1);
+            color: var(--slate);
             font-weight: 300;
         }
 
@@ -349,7 +384,7 @@
 
         footer p {
             font-size: 0.78rem;
-            color: var(--gray-2);
+            color: var(--slate-dim);
         }
 
         .footer-links {
@@ -359,12 +394,12 @@
 
         .footer-links a {
             font-size: 0.78rem;
-            color: var(--gray-2);
+            color: var(--slate-dim);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--gray-1); }
+        .footer-links a:hover { color: var(--slate); }
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 800px) {
@@ -399,7 +434,14 @@
 
     <nav id="site-nav">
         <div class="nav-inner">
-            <a href="/" class="nav-logo">SJT Digital</a>
+            <a href="/" class="nav-logo" aria-label="SJT Digital">
+                <span class="bracket"></span>
+                <span class="lockup">
+                    <span class="sjt">SJT</span>
+                    <span class="digital">Digital</span>
+                </span>
+                <span class="bracket"></span>
+            </a>
             <ul class="nav-links">
                 <li><a href="/#about">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
