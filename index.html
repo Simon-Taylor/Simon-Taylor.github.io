@@ -329,6 +329,15 @@
             padding: 3rem 2.5rem;
         }
 
+        .cs-intro {
+            max-width: 640px;
+            margin-top: -0.5rem;
+            font-size: 0.9rem;
+            color: var(--slate-dim);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
         .cs-label {
             font-family: 'IBM Plex Mono', ui-monospace, monospace;
             font-size: 0.68rem;
@@ -362,6 +371,30 @@
             text-transform: uppercase;
             color: var(--slate-dim);
             margin-bottom: 2rem;
+        }
+
+        .cs-head {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.35;
+            letter-spacing: -0.015em;
+            color: var(--paper);
+            margin-bottom: 1rem;
+        }
+
+        .cs-evidence {
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .cs-evidence strong {
+            color: var(--brass);
+            font-weight: 500;
         }
 
         .cs-desc {
@@ -639,103 +672,92 @@
         <!-- CASE STUDIES -->
         <section>
             <div class="container">
-                <p class="section-label">Case Studies</p>
-                <h2>Done inside PE-backed businesses.<br>And for the funds that own them.</h2>
-
-                <div class="case-study-feature">
-                    <div>
-                        <p class="cs-label">Portfolio AI Validation</p>
-                        <div class="cs-stat">18 <em>cos</em></div>
-                        <p class="cs-context">Assessed in four weeks</p>
-                    </div>
-                    <div>
-                        <p class="cs-desc">
-                            A mid-market fund had collected AI self-assessments from every company it
-                            owned. The returns looked reassuring, which was the problem: the people
-                            reporting progress were the people being measured on it, and nothing had
-                            been checked from the outside.
-                        </p>
-                        <p class="cs-desc">
-                            Each holding was reassessed independently against public evidence, product
-                            claims, hiring signals and technical footprint, then triangulated against
-                            what the company had reported about itself. Most of the portfolio stood up.
-                            <strong style="color: var(--paper); font-weight: 500;">The value was in the
-                            handful that did not.</strong>
-                        </p>
-                        <div class="cs-feature-findings">
-                            <div class="cs-finding">
-                                <p><strong>5</strong>holdings where the self-reported AI position was corroborated by no external evidence at all.</p>
-                            </div>
-                            <div class="cs-finding">
-                                <p><strong>1</strong>reporting AI progress while revenue had reportedly fallen by around two-thirds.</p>
-                            </div>
-                            <div class="cs-finding">
-                                <p><strong>2</strong>that did not trace to a named fund vehicle, raising a scope question nobody had asked.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="section-label">The Work</p>
+                <h2>Four kinds of engagement.<br>One underlying claim.</h2>
+                <p class="cs-intro">
+                    In most organisations capability is rarely the constraint. Structure,
+                    process and accumulated friction usually are. Each of these is a different
+                    way of proving that, and of getting the value out.
+                </p>
 
                 <div class="case-studies">
 
                     <div class="case-study">
-                        <p class="cs-label">Core Product Rebuild</p>
-                        <div class="cs-stat">90 <em>days</em></div>
-                        <p class="cs-context">vs. an 18-month waterfall estimate</p>
+                        <p class="cs-label">Tell me what is real</p>
+                        <h4 class="cs-head">Independent validation of AI claims across a portfolio</h4>
                         <p class="cs-desc">
-                            A core B2B product, serving hundreds of long-standing customers, was overdue for a full
-                            rebuild. The conventional programme would have taken 18 months and multiple teams.
-                            Instead, the CPTO ran a deliberate experiment: a small group of expert engineers, a
-                            separate £500k budget, AI tooling replacing traditional delivery overhead, and a fixed
-                            90-day deadline.
+                            Every company in a portfolio now reports AI progress, and the people
+                            reporting it are the people being measured on it. Almost none of it
+                            has been checked from the outside. I assess a whole portfolio
+                            independently, place each holding against evidence rather than
+                            self-assessment, and hand the investment team a written view that
+                            stands up in a board or valuation discussion.
                         </p>
-                        <p class="cs-desc">
-                            It delivered. On time. To strong customer reception. But the more important finding
-                            wasn't the speed. It was the proof that the real constraint in large enterprises is
-                            rarely capability. <strong style="color: var(--paper); font-weight: 500;">It is structure.</strong>
-                            Strip away the governance layers, the approval bottlenecks, the committee-driven
-                            prioritisation. A small team with AI tools can move at a pace that rewrites
-                            the business case for how software gets built.
-                        </p>
-                        <p class="cs-desc">
-                            This became the blueprint. A replicable model for AI-native delivery, applicable
-                            across the portfolio and beyond.
+                        <p class="cs-evidence">
+                            <strong>Four weeks</strong> for a full mid-market portfolio, with
+                            almost no management time and without tipping off the companies.
                         </p>
                     </div>
 
                     <div class="case-study">
-                        <p class="cs-label">Internal Tool Sprint</p>
-                        <div class="cs-stat">5 <em>days</em></div>
-                        <p class="cs-context">vs. a £85–125k traditional estimate</p>
+                        <p class="cs-label">Make delivery cost less</p>
+                        <h4 class="cs-head">Resetting what a programme costs and how long it takes</h4>
                         <p class="cs-desc">
-                            A programme team was managing cross-portfolio activity across a patchwork of
-                            spreadsheets: no consolidated view, no audit trail, no way to hold anyone
-                            accountable. The IT delivery queue was long. The team decided not to join it.
+                            A small group of expert engineers with AI tooling, insulated from
+                            governance layers and approval queues, delivers what a conventional
+                            programme takes multiples longer to produce. The interesting part is
+                            never the speed. It is what the speed reveals about how much of the
+                            original estimate was structure rather than work.
                         </p>
-                        <p class="cs-desc">
-                            Instead: one developer, AI tooling, five working days. The result was a
-                            full production web application: SSO authentication, role-based access,
-                            live dashboards, automated notifications, and a complete audit trail.
-                            13,600 lines of application code. Deployed to the company's Kubernetes
-                            infrastructure. Enterprise-grade from day one.
+                        <p class="cs-evidence">
+                            A core product rebuild estimated at <strong>18 months</strong>,
+                            delivered in <strong>90 days</strong>, on time and to strong customer
+                            reception.
                         </p>
+                    </div>
+
+                    <div class="case-study">
+                        <p class="cs-label">Build it, don't scope it</p>
+                        <h4 class="cs-head">Working software instead of a delivery queue</h4>
                         <p class="cs-desc">
-                            Total additional cost: <strong style="color: var(--paper); font-weight: 500;">£360</strong>,
-                            one month's AI tooling subscription. The developer was already on payroll.
-                            No contractors, no project manager, no QA cycle, no DevOps setup fee.
+                            Some problems do not need a roadmap, a business case and a place in
+                            the queue. They need someone to build the thing. I still write code,
+                            and a good deal of what I deliver is software rather than advice:
+                            production applications with authentication, access control,
+                            reporting and an audit trail, on the company's own infrastructure.
+                        </p>
+                        <p class="cs-evidence">
+                            Spreadsheets to a deployed, enterprise-grade application in
+                            <strong>one week</strong>, for the cost of a monthly software
+                            subscription.
+                        </p>
+                    </div>
+
+                    <div class="case-study">
+                        <p class="cs-label">Make the programme legible</p>
+                        <h4 class="cs-head">Governance an investor and an engineer both believe</h4>
+                        <p class="cs-desc">
+                            Large programmes go dark long before they go wrong. Status becomes a
+                            negotiation, forecasts get re-argued every cycle, and nobody can say
+                            what is actually true. I put in the reporting line that rolls
+                            delivery up from the work itself, so the board sees the same picture
+                            the engineers do, and decisions stop being re-litigated.
+                        </p>
+                        <p class="cs-evidence">
+                            One view of a multi-workstream programme, produced from the delivery
+                            data rather than assembled by hand each month.
                         </p>
                     </div>
 
                 </div>
 
                 <p class="cs-footnote">
-                    The two delivery experiments ran inside the same PE-backed enterprise software
-                    company. Both used Claude Code as the primary development tool. Neither required
-                    additional headcount. Both are live in production. Portfolio and holding names
-                    are withheld throughout.
+                    Engagements are described in outline only. Client names, sectors, portfolio
+                    composition, budgets and any figure that would identify a business or its
+                    financial position are withheld, including where no confidentiality
+                    obligation requires it. Detail is available in conversation, within whatever
+                    the relevant agreement allows.
                 </p>
-            </div>
-        </section>
 
         <!-- HOW IT WORKS -->
         <section>
@@ -784,12 +806,14 @@
                             than advice.
                         </p>
                         <p>
-                            Most recently at a Blackstone portfolio company, I ran two AI delivery
-                            experiments that have since become the reference points I use with every PE client.
-                            One proved that a small team with the right tools can compress an 18-month product
-                            rebuild into 90 days. The other proved that a single developer, given AI tooling
-                            and no bureaucratic overhead, can deliver production software in five days for
-                            the cost of a monthly subscription.
+                            Most recently inside a large PE-backed enterprise software business, I ran two
+                            AI delivery experiments that have since become the reference points I use with
+                            every PE client. One proved that a small team with the right tools can compress
+                            an 18-month product rebuild into 90 days. The other proved that a single
+                            developer, given AI tooling and no bureaucratic overhead, can deliver production
+                            software in a week for the cost of a monthly subscription. Since then I have
+                            worked at fund level, validating AI claims across a whole portfolio, and inside
+                            portfolio companies as fractional CTO on programme governance and delivery.
                         </p>
                         <p>
                             Both projects pointed to the same pattern: <strong style="color: var(--paper); font-weight: 500;">in most organisations,
