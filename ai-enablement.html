@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Enablement for Portfolio Companies | SJT Digital</title>
+    <meta name="description" content="Everyone else seems to have AI figured out. They haven't. I help growing businesses work out where AI genuinely earns its place in everyday work, and get the first thing working.">
+    <meta name="author" content="Simon Taylor">
+    <!-- DRAFT: not linked from the live site yet. Build notes in AI-Value-Prop/Offers/ai-enablement-value-proposition.md -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sjtdigital.com/ai-enablement">
+    <meta property="og:title" content="AI Enablement for Portfolio Companies | SJT Digital">
+    <meta property="og:description" content="Everyone else seems to have AI figured out. They haven't. I help growing businesses work out where AI genuinely earns its place in everyday work, and get the first thing working.">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sjtdigital.com/ai-enablement">
+    <meta property="twitter:title" content="AI Enablement for Portfolio Companies | SJT Digital">
+    <meta property="twitter:description" content="Everyone else seems to have AI figured out. They haven't. I help growing businesses work out where AI genuinely earns its place in everyday work, and get the first thing working.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg:       #0b0c11;
+            --bg-card:  #111419;
+            --brass:    #B8963F;
+            --brass-dim: rgba(184, 150, 63, 0.15);
+            --paper:    #F0EFEA;
+            --slate:    #9FA1B2;
+            --slate-dim:#58596A;
+            --border:   #1d1f2c;
+            --max-w:    1080px;
+            --nav-h:    68px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--paper);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            transition: background 0.4s, border-color 0.4s;
+            border-bottom: 1px solid transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(11, 12, 17, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-color: var(--border);
+        }
+
+        .nav-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: inline-flex;
+            align-items: stretch;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .nav-logo .bracket {
+            width: 2px;
+            background: var(--brass);
+        }
+
+        .nav-logo .lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 3px 0;
+        }
+
+        .nav-logo .sjt {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            color: var(--paper);
+        }
+
+        .nav-logo .digital {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.5rem;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--slate);
+        }
+
+        .nav-logo:hover .digital { color: var(--paper); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            color: var(--slate);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--paper); }
+
+        .nav-phone {
+            color: var(--brass) !important;
+            font-weight: 500;
+            font-size: 0.85rem !important;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: calc(var(--nav-h) + 5rem) 2rem 3.5rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .overline {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.75rem, 6vw, 4.75rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: var(--paper);
+            margin-bottom: 2rem;
+            max-width: 16ch;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--slate);
+            max-width: 500px;
+            line-height: 1.75;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .hero-ctas {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--brass);
+            color: #0b0c11;
+            padding: 0.9rem 2rem;
+            border-radius: 3px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.85; }
+
+        .hero-tel {
+            font-size: 1rem;
+            color: var(--slate);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .hero-tel:hover { color: var(--paper); }
+        .hero-tel strong { color: var(--paper); font-weight: 500; }
+
+        /* ─── SHARED ─── */
+        section {
+            padding: 8rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: var(--paper);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ─── THESIS ─── */
+        .thesis-body {
+            max-width: 660px;
+            margin-top: 1rem;
+        }
+
+        .thesis-body p {
+            font-size: 1.05rem;
+            color: var(--slate);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+        }
+
+        .thesis-body p strong {
+            color: var(--paper);
+            font-weight: 500;
+        }
+
+        /* ─── CASE STUDIES ─── */
+        .case-study-feature {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 3.5rem;
+            border: 1px solid var(--border);
+            padding: 3rem 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .cs-feature-findings {
+            margin-top: 1.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .cs-finding p {
+            font-size: 0.8rem;
+            color: var(--slate);
+            line-height: 1.65;
+            font-weight: 300;
+        }
+
+        .cs-finding strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--brass);
+            margin-bottom: 0.4rem;
+        }
+
+        .case-studies {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+            margin-top: 1.5rem;
+        }
+
+        .case-study {
+            background: var(--bg);
+            padding: 3rem 2.5rem;
+        }
+
+        .cs-intro {
+            max-width: 640px;
+            margin-top: -0.5rem;
+            font-size: 0.9rem;
+            color: var(--slate-dim);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .cs-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 1.75rem;
+        }
+
+        .cs-stat {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            color: var(--paper);
+            margin-bottom: 0.4rem;
+        }
+
+        .cs-stat em {
+            color: var(--brass);
+            font-style: normal;
+            font-size: 2.25rem;
+        }
+
+        .cs-context {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--slate-dim);
+            margin-bottom: 2rem;
+        }
+
+        .cs-head {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.35;
+            letter-spacing: -0.015em;
+            color: var(--paper);
+            margin-bottom: 1rem;
+        }
+
+        .cs-evidence {
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .cs-evidence strong {
+            color: var(--brass);
+            font-weight: 500;
+        }
+
+        .cs-desc {
+            font-size: 0.9rem;
+            color: var(--slate);
+            line-height: 1.8;
+            margin-bottom: 0.9rem;
+            font-weight: 300;
+        }
+
+        .cs-desc:last-child { margin-bottom: 0; }
+
+        .cs-footnote {
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--slate-dim);
+            font-style: italic;
+            line-height: 1.65;
+        }
+
+        /* ─── HOW ─── */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+            margin-top: 3.5rem;
+        }
+
+        .step {
+            background: var(--bg);
+            padding: 2.5rem 2rem;
+        }
+
+        .step-num {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 1rem;
+        }
+
+        .step h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--paper);
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        .step p {
+            font-size: 0.875rem;
+            color: var(--slate);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ─── ABOUT ─── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 3.5rem;
+            align-items: start;
+            margin-top: 0.5rem;
+        }
+
+        .about-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(15%);
+            display: block;
+        }
+
+        .about-body p {
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+            font-weight: 300;
+        }
+
+        .about-body p strong {
+            color: var(--paper);
+            font-weight: 500;
+        }
+
+        .about-body p:first-child { margin-top: 0.5rem; }
+
+        /* ─── CTA BLOCK ─── */
+        .cta-section {
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            max-width: 22ch;
+            margin: 0 auto 1.25rem;
+        }
+
+        .cta-section > .container > p {
+            color: var(--slate);
+            font-size: 1rem;
+            max-width: 44ch;
+            margin: 0 auto 3.5rem;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        .cta-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .tel-headline {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--paper);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .tel-headline:hover { color: var(--brass); }
+
+        .divider-text {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--slate-dim);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+        .footer-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: var(--slate-dim);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: var(--slate-dim);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--slate); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 800px) {
+            .case-studies {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-feature {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2.5rem 1.75rem;
+            }
+
+            .cs-feature-findings {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            section { padding: 5rem 1.5rem; }
+
+            .hero {
+                padding: calc(var(--nav-h) + 3.5rem) 1.5rem 5rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .nav-links li:not(:last-child):not(:nth-last-child(2)) {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+
+
+        /* ─── AI ENABLEMENT PAGE ADDITIONS ─── */
+        :root { --text: #C9CAD3; }
+        .band { background: var(--bg-card); }
+        main > section { padding-top: 4rem; padding-bottom: 5rem; }
+        .hero.hero-split { padding-bottom: 1.5rem; align-items: start; }
+        .hero.hero-split .hero-art { margin-top: 2.5rem; }
+        .hero.hero-split .hero-art svg { max-width: 380px; }
+        .hero-ctas { margin-bottom: 0; }
+        .nav-links .nav-current { color: var(--paper); }
+        .container.narrow { max-width: 760px; }
+        .thesis-body { max-width: 760px; }
+        .thesis-body p, .about-body p, .hero-sub, .strip-body { color: var(--text); font-size: 1.08rem; line-height: 1.7; }
+        .thesis-body p strong { color: var(--paper); }
+        .hero.hero-split {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: start;
+            min-height: auto;
+            padding-top: 9rem;
+            padding-bottom: 1.5rem;
+        }
+        .hero-split h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
+        .hero-art { margin: 0; }
+        .hero-art svg { max-width: 420px; margin-left: auto; }
+        .side-art svg { max-width: 260px; }
+        .hero-art svg, .side-art svg { width: 100%; height: auto; display: block; }
+        .split { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: start; margin-top: 3rem; }
+        .side-art { margin: 0; position: sticky; top: 7rem; }
+        .band .about-photo { border-color: var(--border); }
+        .investor-strip { padding: 4rem 2rem; background: var(--bg-card); border-top: 1px solid var(--border); }
+        .strip-body { max-width: 720px; }
+        .about-body a { color: var(--brass); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+        .strip-body a { color: var(--brass); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+        .strip-body a:hover { border-bottom-color: var(--brass); }
+        @media (max-width: 860px) {
+            .hero.hero-split, .split { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero-art { max-width: 320px; }
+            .side-art { position: static; max-width: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="site-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" aria-label="SJT Digital">
+                <span class="bracket"></span>
+                <span class="lockup">
+                    <span class="sjt">SJT</span>
+                    <span class="digital">Digital</span>
+                </span>
+                <span class="bracket"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">For investors</a></li>
+                <li><a href="/ai-enablement" class="nav-current">For portfolio companies</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:+447972377139" class="nav-phone">+44 7972 377139</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <div class="hero hero-split">
+            <div>
+                <p class="overline">AI in everyday work</p>
+                <h1>Everyone else seems to have AI figured&nbsp;out. They&nbsp;haven't.</h1>
+                <p class="hero-sub">
+                    Most businesses are at the same point: a few people use it, nobody is sure
+                    what it has changed, and the board has started asking. The gains are real,
+                    though, and they will go to the businesses that make it work in everyday
+                    jobs. SJT Digital helps you find where it genuinely earns its place, and
+                    gets the first thing working.
+                </p>
+                <div class="hero-ctas">
+                    <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
+                       class="btn"
+                       onclick="gtag('event', 'generate_lead', {'currency': 'GBP', 'value': 0});">
+                        Book a Call
+                    </a>
+                    <a href="tel:+447972377139" class="hero-tel">or call <strong>+44 7972 377139</strong></a>
+                </div>
+            </div>
+<figure class="hero-art">
+<svg role="img" aria-label="Scattered points, a few of them joined into a shape" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 440 300"><circle cx="247" cy="254" r="2.2" fill="#6F6D63" opacity="0.64"/><circle cx="113" cy="110" r="1.7" fill="#6F6D63" opacity="0.87"/><circle cx="330" cy="111" r="1.4" fill="#6F6D63" opacity="0.41"/><circle cx="62" cy="37" r="1.6" fill="#6F6D63" opacity="0.74"/><circle cx="247" cy="96" r="2.2" fill="#6F6D63" opacity="0.76"/><circle cx="48" cy="46" r="2.2" fill="#6F6D63" opacity="0.37"/><circle cx="323" cy="31" r="1.5" fill="#6F6D63" opacity="0.86"/><circle cx="318" cy="116" r="1.9" fill="#6F6D63" opacity="0.69"/><circle cx="271" cy="18" r="1.6" fill="#6F6D63" opacity="0.78"/><circle cx="158" cy="224" r="2.4" fill="#6F6D63" opacity="1.00"/><circle cx="58" cy="146" r="1.3" fill="#6F6D63" opacity="0.55"/><circle cx="163" cy="31" r="2.1" fill="#6F6D63" opacity="0.40"/><circle cx="221" cy="71" r="1.5" fill="#6F6D63" opacity="0.90"/><circle cx="24" cy="16" r="2.3" fill="#6F6D63" opacity="0.49"/><circle cx="42" cy="256" r="2.0" fill="#6F6D63" opacity="0.59"/><circle cx="230" cy="53" r="1.3" fill="#6F6D63" opacity="0.72"/><circle cx="361" cy="154" r="1.4" fill="#6F6D63" opacity="0.57"/><circle cx="23" cy="225" r="1.2" fill="#6F6D63" opacity="0.84"/><circle cx="142" cy="67" r="1.7" fill="#6F6D63" opacity="0.36"/><circle cx="265" cy="106" r="1.3" fill="#6F6D63" opacity="0.79"/><circle cx="276" cy="113" r="2.1" fill="#6F6D63" opacity="0.99"/><circle cx="230" cy="212" r="1.6" fill="#6F6D63" opacity="0.43"/><circle cx="124" cy="16" r="2.4" fill="#6F6D63" opacity="0.53"/><circle cx="319" cy="171" r="1.0" fill="#6F6D63" opacity="1.00"/><circle cx="111" cy="217" r="1.8" fill="#6F6D63" opacity="1.00"/><circle cx="311" cy="67" r="1.2" fill="#6F6D63" opacity="0.38"/><circle cx="242" cy="148" r="1.9" fill="#6F6D63" opacity="0.36"/><circle cx="167" cy="213" r="1.1" fill="#6F6D63" opacity="0.40"/><circle cx="314" cy="140" r="1.5" fill="#6F6D63" opacity="0.36"/><circle cx="334" cy="248" r="1.8" fill="#6F6D63" opacity="0.43"/><circle cx="310" cy="85" r="1.3" fill="#6F6D63" opacity="0.91"/><circle cx="94" cy="175" r="2.1" fill="#6F6D63" opacity="0.94"/><circle cx="143" cy="113" r="1.9" fill="#6F6D63" opacity="0.45"/><circle cx="299" cy="116" r="1.5" fill="#6F6D63" opacity="0.80"/><circle cx="263" cy="56" r="1.1" fill="#6F6D63" opacity="0.62"/><circle cx="35" cy="278" r="1.3" fill="#6F6D63" opacity="0.98"/><circle cx="376" cy="216" r="2.2" fill="#6F6D63" opacity="0.52"/><circle cx="321" cy="267" r="1.2" fill="#6F6D63" opacity="0.54"/><circle cx="384" cy="51" r="1.7" fill="#6F6D63" opacity="0.43"/><circle cx="350" cy="53" r="2.3" fill="#6F6D63" opacity="0.53"/><circle cx="120" cy="24" r="1.6" fill="#6F6D63" opacity="0.39"/><circle cx="143" cy="46" r="1.4" fill="#6F6D63" opacity="0.38"/><circle cx="287" cy="83" r="1.2" fill="#6F6D63" opacity="0.41"/><circle cx="246" cy="185" r="2.0" fill="#6F6D63" opacity="0.78"/><circle cx="315" cy="87" r="2.3" fill="#6F6D63" opacity="0.73"/><circle cx="259" cy="199" r="2.3" fill="#6F6D63" opacity="0.81"/><circle cx="26" cy="54" r="2.0" fill="#6F6D63" opacity="0.66"/><circle cx="179" cy="85" r="1.1" fill="#6F6D63" opacity="1.00"/><circle cx="295" cy="204" r="2.3" fill="#6F6D63" opacity="0.83"/><circle cx="393" cy="82" r="2.3" fill="#6F6D63" opacity="0.87"/><circle cx="196" cy="59" r="2.3" fill="#6F6D63" opacity="0.80"/><circle cx="229" cy="31" r="1.8" fill="#6F6D63" opacity="0.91"/><circle cx="335" cy="211" r="1.0" fill="#6F6D63" opacity="0.60"/><circle cx="52" cy="57" r="1.2" fill="#6F6D63" opacity="0.41"/><circle cx="147" cy="229" r="1.5" fill="#6F6D63" opacity="0.82"/><circle cx="392" cy="250" r="2.2" fill="#6F6D63" opacity="0.64"/><circle cx="58" cy="281" r="1.0" fill="#6F6D63" opacity="0.84"/><circle cx="323" cy="60" r="1.3" fill="#6F6D63" opacity="0.66"/><circle cx="373" cy="73" r="1.9" fill="#6F6D63" opacity="0.67"/><circle cx="264" cy="146" r="1.5" fill="#6F6D63" opacity="0.93"/><circle cx="89" cy="119" r="2.1" fill="#6F6D63" opacity="0.69"/><circle cx="191" cy="242" r="1.3" fill="#6F6D63" opacity="0.67"/><circle cx="223" cy="144" r="1.6" fill="#6F6D63" opacity="0.48"/><circle cx="402" cy="118" r="1.5" fill="#6F6D63" opacity="0.92"/><circle cx="314" cy="178" r="1.2" fill="#6F6D63" opacity="0.49"/><circle cx="195" cy="36" r="2.3" fill="#6F6D63" opacity="0.81"/><circle cx="157" cy="102" r="1.7" fill="#6F6D63" opacity="0.42"/><circle cx="125" cy="227" r="1.7" fill="#6F6D63" opacity="0.60"/><circle cx="360" cy="177" r="2.2" fill="#6F6D63" opacity="0.82"/><circle cx="335" cy="247" r="2.2" fill="#6F6D63" opacity="0.56"/><circle cx="158" cy="37" r="1.4" fill="#6F6D63" opacity="0.79"/><circle cx="197" cy="174" r="1.8" fill="#6F6D63" opacity="0.77"/><circle cx="344" cy="85" r="1.3" fill="#6F6D63" opacity="0.61"/><circle cx="409" cy="152" r="1.2" fill="#6F6D63" opacity="0.50"/><circle cx="40" cy="75" r="1.9" fill="#6F6D63" opacity="0.64"/><circle cx="351" cy="204" r="2.0" fill="#6F6D63" opacity="0.97"/><circle cx="118" cy="259" r="2.0" fill="#6F6D63" opacity="0.52"/><circle cx="402" cy="257" r="1.1" fill="#6F6D63" opacity="0.70"/><circle cx="131" cy="155" r="1.8" fill="#6F6D63" opacity="0.86"/><circle cx="282" cy="272" r="2.1" fill="#6F6D63" opacity="0.75"/><circle cx="217" cy="130" r="2.3" fill="#6F6D63" opacity="0.41"/><circle cx="385" cy="214" r="1.6" fill="#6F6D63" opacity="0.43"/><circle cx="336" cy="19" r="1.8" fill="#6F6D63" opacity="0.59"/><circle cx="273" cy="191" r="1.9" fill="#6F6D63" opacity="0.65"/><circle cx="120" cy="66" r="2.1" fill="#6F6D63" opacity="0.82"/><circle cx="344" cy="79" r="2.3" fill="#6F6D63" opacity="0.49"/><circle cx="60" cy="174" r="2.1" fill="#6F6D63" opacity="0.70"/><circle cx="180" cy="150" r="2.2" fill="#6F6D63" opacity="0.94"/><circle cx="194" cy="274" r="1.6" fill="#6F6D63" opacity="0.40"/><circle cx="297" cy="231" r="1.7" fill="#6F6D63" opacity="0.85"/><circle cx="120" cy="210" r="14" fill="#B8963F" fill-opacity="0.07"/><circle cx="190" cy="120" r="14" fill="#B8963F" fill-opacity="0.07"/><circle cx="270" cy="150" r="14" fill="#B8963F" fill-opacity="0.07"/><circle cx="330" cy="80" r="14" fill="#B8963F" fill-opacity="0.07"/><circle cx="380" cy="190" r="14" fill="#B8963F" fill-opacity="0.07"/><path d="M120 210 L190 120 L270 150 L330 80 L380 190" stroke="#B8963F" stroke-width="1.6"/><circle cx="120" cy="210" r="4" fill="#709060" fill-opacity="0.4" stroke="#B8963F" stroke-width="1.6"/><circle cx="190" cy="120" r="4" fill="#709060" fill-opacity="0.4" stroke="#B8963F" stroke-width="1.6"/><circle cx="270" cy="150" r="4" fill="#709060" fill-opacity="0.4" stroke="#B8963F" stroke-width="1.6"/><circle cx="330" cy="80" r="4" fill="#709060" fill-opacity="0.4" stroke="#B8963F" stroke-width="1.6"/><circle cx="380" cy="190" r="4" fill="#709060" fill-opacity="0.4" stroke="#B8963F" stroke-width="1.6"/></svg>
+</figure>
+        </div>
+
+        <!-- THE SITUATION -->
+        <section>
+            <div class="container">
+                <p class="section-label">Where this is coming from</p>
+                <h2>Almost nobody is as far along as they look.<br>That is the good news.</h2>
+                <div class="split">
+                <div class="thesis-body">
+                    <p>There is a great deal of confident talk about AI at the moment, and most of it is more confident than the work behind it. Looked at from the outside, every competitor seems further along. Your investor has probably asked the question. It is easy to feel late.</p>
+                    <p>The view from inside is different. Spend time in enough of these businesses, of all sizes and in every sector, and the pattern is the same almost everywhere: a few people use it every day, most don't, someone has built something nobody else touches, and very few businesses can say what any of it has changed. What gets published is the tidy version. Very few businesses are as far along as their public story suggests, and once you know that, the gap feels a good deal smaller.</p>
+                    <p>None of that makes AI any less real. It can now be applied well to almost any knowledge work in any business: finance, sales, admin, support, HR, the jobs that consist of moving information from one place to another. That is where the hours are. Where it has already landed, in the software teams of businesses that build software, a small group now gets through what used to need a department. The businesses that manage the same in their everyday work will be quicker and cheaper to run than the ones that don't, and the difference between them will not be the technology, which anyone can buy. It will be who made it work.</p>
+                    <p>Making it work is a skill, and it is a different skill from being enthusiastic about it. It comes from having seen enough of these businesses from the inside to know what takes and what doesn't, and from getting the first real thing running rather than talking about the tenth. That is what SJT Digital brings.</p>
+                </div>
+<figure class="side-art">
+<svg role="img" aria-label="Nine cards showing the same tidy front; one turned over" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 300 420"><rect x="40" y="60" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="50" y1="80" x2="88" y2="80" stroke="#6F6D63" stroke-width="1.2"/><line x1="50" y1="92" x2="80" y2="92" stroke="#6F6D63" stroke-width="1.2"/><path d="M50 120 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="120" y="60" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="130" y1="80" x2="168" y2="80" stroke="#6F6D63" stroke-width="1.2"/><line x1="130" y1="92" x2="160" y2="92" stroke="#6F6D63" stroke-width="1.2"/><path d="M130 120 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="200" y="60" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="210" y1="80" x2="248" y2="80" stroke="#6F6D63" stroke-width="1.2"/><line x1="210" y1="92" x2="240" y2="92" stroke="#6F6D63" stroke-width="1.2"/><path d="M210 120 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="40" y="160" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="50" y1="180" x2="88" y2="180" stroke="#6F6D63" stroke-width="1.2"/><line x1="50" y1="192" x2="80" y2="192" stroke="#6F6D63" stroke-width="1.2"/><path d="M50 220 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="120" y="160" width="60" height="78" rx="3" fill="#0B0C11" stroke="#B8963F" stroke-width="1.8"/><path d="M130 190 q10 -12 20 0 t20 0 M130 208 q8 10 16 0 t16 0" stroke="#6F6D63" stroke-width="1.2"/><rect x="200" y="160" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="210" y1="180" x2="248" y2="180" stroke="#6F6D63" stroke-width="1.2"/><line x1="210" y1="192" x2="240" y2="192" stroke="#6F6D63" stroke-width="1.2"/><path d="M210 220 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="40" y="260" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="50" y1="280" x2="88" y2="280" stroke="#6F6D63" stroke-width="1.2"/><line x1="50" y1="292" x2="80" y2="292" stroke="#6F6D63" stroke-width="1.2"/><path d="M50 320 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="120" y="260" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="130" y1="280" x2="168" y2="280" stroke="#6F6D63" stroke-width="1.2"/><line x1="130" y1="292" x2="160" y2="292" stroke="#6F6D63" stroke-width="1.2"/><path d="M130 320 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><rect x="200" y="260" width="60" height="78" rx="3" fill="#0B0C11" stroke="#6F6D63" stroke-width="1.3"/><line x1="210" y1="280" x2="248" y2="280" stroke="#6F6D63" stroke-width="1.2"/><line x1="210" y1="292" x2="240" y2="292" stroke="#6F6D63" stroke-width="1.2"/><path d="M210 320 l5 5 l10 -10" stroke="#9FA1B2" stroke-width="1.6"/><g font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.4" fill="#6F6D63"><text x="40" y="380">EIGHT FRONTS. ONE BACK.</text></g></svg>
+</figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I KEEP SEEING -->
+        <section class="band">
+            <div class="container">
+                <p class="section-label">What keeps turning out to be true</p>
+                <h2>Four things that hold in most businesses.</h2>
+                <div class="split">
+                    <div class="thesis-body">
+                        <p><strong>It is no longer a software-company thing.</strong> The tools now sit inside the software everyone already uses, they read and write ordinary documents, and they do not need an engineer in the room to be useful. A finance team, a sales desk or an HR function can get real value from them this quarter. That was not true two years ago.</p>
+                        <p><strong>The best opportunities are hiding in ordinary processes.</strong> Ask a team where AI could help and the ideas come quickly. Look at the ones that would save the most hours and they are usually the same kind of thing: a job that was never quite written down, done slightly differently by everyone who does it. That used to be the reason nothing could be automated. Now writing the job down and having an assistant do it have become one piece of work, and it takes days. The opportunity is bigger than it looks, and it sits in the unglamorous places.</p>
+                        <p><strong>People who aren't engineers start building.</strong> Give a capable, curious person in an operations team the tools and they will build things that work, often faster than a formal project would. Then they reach the edge of what they can do safely without someone technical behind them. Both halves are predictable. The first is the opportunity; the second is what you plan for.</p>
+                        <p><strong>The ones that get somewhere pick one thing.</strong> One process, one person who owns it, a number written down before and after. Not a programme, not a platform, not a pilot in every department. The businesses that stall are the ones that tried to do it everywhere at once.</p>
+                    </div>
+                    <figure class="side-art">
+<svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A tangled process line becoming a straight one">
+  <path d="M40 30 C 120 30, 60 90, 130 90 S 60 150, 150 150 S 80 210, 170 210" stroke="#6F6D63" stroke-width="1.6" stroke-dasharray="4 5"/>
+  <path d="M40 30 C 120 30, 60 90, 130 90" stroke="#6F6D63" stroke-width="1.6"/>
+  <g fill="#0B0C11" stroke="#6F6D63" stroke-width="1.6"><circle cx="40" cy="30" r="5"/><circle cx="130" cy="90" r="5"/><circle cx="150" cy="150" r="5"/><circle cx="170" cy="210" r="5"/></g>
+  <path d="M170 210 L 170 380" stroke="#B8963F" stroke-width="2"/>
+  <circle cx="170" cy="380" r="7" fill="#709060" fill-opacity="0.35" stroke="#B8963F" stroke-width="2"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.5" fill="#6F6D63"><text x="48" y="24">HOW IT IS DONE TODAY</text><text x="185" y="378" fill="#B8963F">WRITTEN DOWN,</text><text x="185" y="392" fill="#B8963F">THEN AUTOMATED</text></g>
+</svg>
+</figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW I'D APPROACH IT -->
+        <section>
+            <div class="container">
+                <p class="section-label">How an engagement takes shape</p>
+                <h2>It starts with your question, not a package.</h2>
+                <div class="split">
+                <div class="thesis-body">
+                    <p>There is no standard programme here, because the businesses are not standard. What is right for a forty-person services firm with an overloaded finance team is not what is right for a two-hundred-person business with a product of its own and a customer support desk that never sleeps. So the shape of the work follows the business, and it is agreed in writing before anything starts.</p>
+                    <p>It does always begin in the same place: with what your board or investor has actually asked for. "Do something about AI" is not a brief anyone can deliver against, and turning it into one is a real piece of work in itself.</p>
+                    <p>Then time with the people doing the work. Not a survey, not a workshop: sitting with finance at month end, listening to how a quote gets put together, watching a support query get answered. That is where the genuine opportunities show themselves, and where the ones that only look like opportunities fall away.</p>
+                    <p>What happens after that depends on what is found. Sometimes it is one thing built and put to work with the person who will own it, and a number to show for it. Sometimes it is a longer piece of work across several teams. Sometimes the most useful outcome is a short, plain view of where the business stands and what is worth doing next, which you act on yourselves. All three are legitimate results, and the right one is a conversation, not a menu.</p>
+                    <p>One thing runs through all of it: the rules get written down. Customer contracts increasingly say what can and cannot go into an AI tool, and someone in your business is probably pasting client information into a personal account right now. Sorting that out is not the exciting part, but your FD will thank you for it, and it is the thing most businesses skip.</p>
+                </div>
+                    <figure class="side-art">
+<svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A clipboard with a short list: two things worth doing, one not">
+  <g stroke="#9FA1B2" stroke-width="1.6">
+    <rect x="50" y="40" width="200" height="300" rx="6" fill="#0B0C11"/>
+    <rect x="115" y="26" width="70" height="26" rx="6" fill="#0B0C11"/>
+    <line x1="80" y1="110" x2="220" y2="110"/><line x1="80" y1="120" x2="180" y2="120"/>
+    <line x1="80" y1="170" x2="220" y2="170"/><line x1="80" y1="180" x2="190" y2="180"/>
+    <line x1="80" y1="230" x2="220" y2="230"/><line x1="80" y1="240" x2="170" y2="240"/>
+    <line x1="80" y1="290" x2="220" y2="290"/><line x1="80" y1="300" x2="200" y2="300"/>
+  </g>
+  <g stroke-width="2.2">
+    <rect x="80" y="82" width="14" height="14" rx="2" stroke="#B8963F" fill="#709060" fill-opacity="0.3"/><path d="M83 89 l3 3 l6 -7" stroke="#B8963F"/>
+    <rect x="80" y="142" width="14" height="14" rx="2" stroke="#6F6D63"/><path d="M83 145 l8 8 M91 145 l-8 8" stroke="#6F6D63"/>
+    <rect x="80" y="202" width="14" height="14" rx="2" stroke="#B8963F" fill="#709060" fill-opacity="0.3"/><path d="M83 209 l3 3 l6 -7" stroke="#B8963F"/>
+    <rect x="80" y="262" width="14" height="14" rx="2" stroke="#6F6D63"/><path d="M83 265 l8 8 M91 265 l-8 8" stroke="#6F6D63"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.5" fill="#B8963F"><text x="100" y="93">WORTH DOING</text><text x="100" y="213">WORTH DOING</text></g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.5" fill="#6F6D63"><text x="100" y="153">CHEAPER FIX</text><text x="100" y="273">LEAVE ALONE</text></g>
+</svg>
+</figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="band" id="about">
+            <div class="container">
+                <p class="section-label">Who is behind it</p>
+                <div class="about-grid">
+                    <img src="assets/profile-pic-320.jpg" alt="Simon Taylor" class="about-photo">
+                    <div class="about-body">
+                        <h2>Simon Taylor</h2>
+                        <p>Simon Taylor has spent twenty years leading product and engineering in businesses of the size you are probably running: investor-backed, growing, never enough people. For the last two of those years, AI has been most of the job.</p>
+                        <p>He has run it inside a large software business, where a small team with the right tools delivered in months what had been planned to take well over a year. He has spent enough time checking other people's AI claims to be sceptical of his own. And SJT Digital itself runs on these tools every day: finance, admin, documents, reporting. He still builds things himself, which matters. It is easy to talk about this from a distance.</p>
+                        <p>Nobody has done your exact use case yet; the field is too new for that. What is on offer is a lot of time inside businesses working out what is real, and a straight answer about it. <a href="/#about">More about Simon</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-block">
+                    <p class="section-label">Start</p>
+                    <h2>Half an hour is the right first step.</h2>
+                    <p class="hero-sub">
+                        Bring whatever your board or investor asked you, or the thing you are quietly
+                        worried about. No deck. You will get a view on what to expect and whether it
+                        is worth going further.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
+                           class="btn"
+                           onclick="gtag('event', 'generate_lead', {'currency': 'GBP', 'value': 0});">
+                            Schedule a 30-min Call
+                        </a>
+                        <a href="tel:+447972377139" class="hero-tel">or call <strong>+44 7972 377139</strong></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTOR STRIP -->
+        <section class="investor-strip">
+            <div class="container">
+                <p class="section-label">If you are the investor</p>
+                <p class="strip-body">
+                    This is the page you can send to your companies. The same approach runs as a
+                    portfolio programme, a webinar or CEO forum first and then company by company,
+                    and the diagnostic is what tells you which companies to spend on. That, and
+                    independent checks on the AI claims your companies make, is on
+                    <a href="/">the page for investors</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> SJT Digital</p>
+            <div class="footer-links">
+                <a href="/">For investors</a>
+                <a href="/ai-enablement">For portfolio companies</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const nav = document.getElementById('site-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+    </script>
+</body>
+</html>
