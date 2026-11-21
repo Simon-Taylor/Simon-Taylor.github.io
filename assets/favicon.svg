@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="SJT Digital">
-  <title>SJT Digital — 16px favicon</title>
-  <!-- The Bracket. Brass rules are rectangles, not glyphs, so the mark survives
-     one-colour print and 16px. Requires IBM Plex Mono; convert text to paths
-     before sending anywhere the font is not installed. -->
-  <rect width="16" height="16" fill="#0B0C11"/>
-  <rect x="2.3" y="4" width="1" height="8" fill="#B8963F"/>
-  <rect x="12.7" y="4" width="1" height="8" fill="#B8963F"/>
-  <text x="5.3" y="11.6" font-family="'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="9" font-weight="500" fill="#F0EFEA">S</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.0 64.0" width="64" height="64" role="img"><title>SJT Digital</title><rect width="64" height="64" rx="11.5" fill="#1D1B18"/><g transform="translate(9.98,51.21)"><path d="M26.1 -35.6 21.9 -36.4 25.2 -39.1H26.5L28.1 -26.3L26.1 -26.1L21.2 -34.5L22.8 -32.7Q21.3 -33.7 19.7 -34.2Q18.1 -34.7 16.2 -34.7Q12.7 -34.7 10.9 -33.3Q9.0 -31.9 9.0 -29.4Q9.0 -27.7 9.8 -26.6Q10.6 -25.4 12.0 -24.7Q13.3 -23.9 15.0 -23.3Q16.8 -22.7 18.7 -22.1Q20.6 -21.5 22.4 -20.7Q24.3 -20.0 25.9 -18.8Q27.5 -17.6 28.4 -15.7Q29.4 -13.8 29.4 -11.1Q29.4 -7.2 27.5 -4.6Q25.6 -2.0 22.3 -0.7Q19.0 0.6 14.6 0.6Q11.7 0.6 9.4 0.3Q7.1 -0.1 4.6 -1.0L2.4 -11.3H4.5L11.6 -1.0L5.9 -4.8Q8.1 -3.7 9.9 -3.2Q11.7 -2.7 13.8 -2.7Q16.9 -2.7 19.0 -3.4Q21.1 -4.1 22.1 -5.5Q23.1 -6.9 23.1 -9.0Q23.1 -11.0 22.2 -12.2Q21.2 -13.5 19.7 -14.3Q18.1 -15.1 16.2 -15.7Q14.3 -16.3 12.5 -16.9Q10.6 -17.5 8.9 -18.3Q7.3 -19.1 6.0 -20.3Q4.7 -21.5 4.0 -23.2Q3.2 -24.9 3.2 -27.3Q3.2 -30.6 4.8 -33.0Q6.5 -35.3 9.5 -36.6Q12.5 -37.9 16.6 -37.9Q19.3 -37.9 21.5 -37.3Q23.8 -36.8 26.1 -35.6Z" fill="#F4F0E6"/><path d="M37.5 -7.7Q39.3 -7.7 40.5 -6.5Q41.7 -5.4 41.7 -3.6Q41.7 -1.9 40.5 -0.7Q39.3 0.5 37.5 0.5Q35.7 0.5 34.5 -0.7Q33.3 -1.9 33.3 -3.6Q33.3 -5.4 34.5 -6.5Q35.7 -7.7 37.5 -7.7Z" fill="#D9A955"/></g></svg>

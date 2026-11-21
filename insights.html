@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="0; url=https://sjtdigital.com/">
     <link rel="canonical" href="https://sjtdigital.com/">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
     <title>SJT Digital</title>
     <meta name="description" content="SJT Digital. AI product and engineering leadership for private equity portfolios.">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --bg:     #0b0c11;
-            --gold:   #B8963F;
-            --white:  #f0efea;
-            --gray-1: #9fa1b2;
+            --bg:     #FAF8F3;
+            --gold:   #B07D2B;
+            --white:  #1D1B18;
+            --gray-1: #5E594F;
         }
 
         body {
-            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+            font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
             background: var(--bg);
             color: var(--white);
             line-height: 1.6;
@@ -45,7 +44,26 @@
         }
 
         a:hover { text-decoration: underline; }
-    </style>
+    
+/* ---- New brand preview overrides ---- */
+
+h1, h2, h3, .hero h1 { font-family: "Newsreader", Georgia, serif !important; font-weight: 400 !important; letter-spacing: -0.015em !important; }
+.fact-num { font-family: "Newsreader", Georgia, serif !important; font-weight: 400; }
+.overline, .section-label { font-weight: 500 !important; letter-spacing: 0.09em !important; }
+.hero-sub { font-weight: 400 !important; }
+/* Buttons: ink, never a filled accent */
+.btn { background: #1D1B18 !important; color: #FAF8F3 !important; border-radius: 999px !important; font-weight: 500 !important; }
+/* Logo */
+.nav-logo svg, .nav-logo img { height: 34px; width: auto; display: block; }
+.header-content h1 img { height: 28px; width: auto; display: block; }
+@media (max-width: 520px) { .nav-logo svg, .nav-logo img, .header-content h1 img { height: 24px; } .nav-links { gap: 1rem !important; } .nav-links a { font-size: 0.8rem; } .footer-links { flex-wrap: wrap; gap: 0.75rem 1.5rem !important; } }
+#preview-flag { position: fixed; left: 14px; bottom: 14px; z-index: 999; font: 12px/1.3 system-ui, sans-serif; background: #1D1B18; color: #FAF8F3; padding: 7px 12px; border-radius: 999px; }
+</style>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="alternate icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
