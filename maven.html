@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ8NNXBM1Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GJ8NNXBM1Z');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for coming | SJT Digital</title>
+    <meta name="robots" content="noindex">
+    <meta name="description"
+        content="Talk to Simon Taylor about AI adoption across a private equity portfolio. Call +44 7972 377139 or book a 30-minute conversation.">
+    <meta name="author" content="Simon Taylor">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sjtdigital.com/maven">
+    <meta property="og:title" content="Thanks for coming | SJT Digital">
+    <meta property="og:description"
+        content="Talk to Simon Taylor about AI adoption across a private equity portfolio.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sjtdigital.com/maven">
+    <meta property="twitter:title" content="Thanks for coming | SJT Digital">
+    <meta property="twitter:description"
+        content="Talk to Simon Taylor about AI adoption across a private equity portfolio.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg:       #0b0c11;
+            --bg-card:  #111419;
+            --brass:    #B8963F;
+            --brass-dim: rgba(184, 150, 63, 0.15);
+            --paper:    #F0EFEA;
+            --slate:    #9FA1B2;
+            --slate-dim:#58596A;
+            --border:   #1d1f2c;
+            --max-w:    1080px;
+            --nav-h:    68px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--paper);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main { flex: 1; }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            transition: background 0.4s, border-color 0.4s;
+            border-bottom: 1px solid transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(11, 12, 17, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-color: var(--border);
+        }
+
+        .nav-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: inline-flex;
+            align-items: stretch;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .nav-logo .bracket {
+            width: 2px;
+            background: var(--brass);
+        }
+
+        .nav-logo .lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 3px 0;
+        }
+
+        .nav-logo .sjt {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            color: var(--paper);
+        }
+
+        .nav-logo .digital {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.5rem;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--slate);
+        }
+
+        .nav-logo:hover .digital { color: var(--paper); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            color: var(--slate);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--paper); }
+        .nav-links a.current { color: var(--paper); }
+
+        .nav-phone {
+            color: var(--brass) !important;
+            font-weight: 500;
+            font-size: 0.85rem !important;
+        }
+
+        /* ─── PAGE HERO ─── */
+        .page-hero {
+            padding: calc(var(--nav-h) + 8rem) 2rem 5rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .overline {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 2rem;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: var(--paper);
+            margin-bottom: 2rem;
+            max-width: 16ch;
+        }
+
+        .page-hero-sub {
+            font-size: 1.15rem;
+            color: var(--slate);
+            max-width: 560px;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        /* ─── CHANNELS ─── */
+        .channels-band {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+        }
+
+        .channels {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5px;
+            background: var(--border);
+        }
+
+        .channel {
+            background: var(--bg);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .channel:first-child { padding-left: 0; }
+        .channel:last-child { padding-right: 0; }
+
+        .channel-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 1.5rem;
+        }
+
+        .channel h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--paper);
+            margin-bottom: 0.85rem;
+        }
+
+        .channel h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .channel h3 a:hover { color: var(--brass); }
+
+        .channel p {
+            font-size: 0.875rem;
+            color: var(--slate);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 1.75rem;
+        }
+
+        .channel .btn { margin-top: auto; align-self: flex-start; }
+
+        .btn {
+            display: inline-block;
+            background: var(--brass);
+            color: #0b0c11;
+            padding: 0.9rem 2rem;
+            border-radius: 3px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.85; }
+
+        /* ─── SHARED ─── */
+        section {
+            padding: 7rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: var(--paper);
+            margin-bottom: 1.5rem;
+        }
+
+        .body-copy {
+            max-width: 660px;
+            margin-top: 1rem;
+        }
+
+        .body-copy p {
+            font-size: 1.05rem;
+            color: var(--slate);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+        }
+
+        .body-copy p:last-child { margin-bottom: 0; }
+
+        .body-copy p strong {
+            color: var(--paper);
+            font-weight: 500;
+        }
+
+        .body-copy a {
+            color: var(--brass);
+            text-decoration: none;
+            border-bottom: 1px solid var(--brass-dim);
+            transition: border-color 0.2s;
+        }
+
+        .body-copy a:hover { border-color: var(--brass); }
+
+        /* ─── DETAILS ─── */
+        .details {
+            margin-top: 3.5rem;
+            border-top: 1px solid var(--border);
+            max-width: 660px;
+        }
+
+        .detail-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+            align-items: baseline;
+        }
+
+        .detail-key {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--slate-dim);
+        }
+
+        .detail-val {
+            font-size: 0.95rem;
+            color: var(--slate);
+            font-weight: 300;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+        .footer-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: var(--slate-dim);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: var(--slate-dim);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--slate); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 800px) {
+            .channels { grid-template-columns: 1fr; }
+            .channels-band { padding: 0 1.5rem; }
+            .channel:first-child { padding-left: 2rem; }
+            .channel:last-child { padding-right: 2rem; }
+
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+
+            section { padding: 5rem 1.5rem; }
+
+            .page-hero {
+                padding: calc(var(--nav-h) + 5rem) 1.5rem 4rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .nav-links li:not(:last-child):not(:nth-last-child(2)) {
+                display: none;
+            }
+
+            .page-hero h1 { font-size: 2.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="site-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" aria-label="SJT Digital">
+                <span class="bracket"></span>
+                <span class="lockup">
+                    <span class="sjt">SJT</span>
+                    <span class="digital">Digital</span>
+                </span>
+                <span class="bracket"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">For investors</a></li>
+                <li><a href="/ai-enablement">For portfolio companies</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:+447972377139" class="nav-phone">+44 7972 377139</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <div class="page-hero">
+            <p class="overline">Scaling Growth with AI</p>
+            <h1>Thanks for coming.</h1>
+            <p class="page-hero-sub">
+                If you recognised your business in the session, the easiest next step is
+                half an hour on a call. Bring the job that eats the hours, and I will tell you
+                honestly whether AI is the answer.
+            </p>
+        </div>
+
+        <div class="channels-band">
+        <div class="channels">
+            <div class="channel">
+                <p class="channel-label">Call</p>
+                <h3><a href="tel:+447972377139">+44 7972 377139</a></h3>
+                <p>The fastest route. If I do not pick up I am in a client session, so leave a message and I will call back the same day.</p>
+                <a href="tel:+447972377139" class="btn">Call Now</a>
+            </div>
+            <div class="channel">
+                <p class="channel-label">Email</p>
+                <h3><a href="mailto:simon@sjtdigital.com">simon@sjtdigital.com</a></h3>
+                <p>Best for anything with detail attached: a portfolio list, a board pack, a scope you want a view on. I reply within a working day.</p>
+                <a href="mailto:simon@sjtdigital.com" class="btn">Send Email</a>
+            </div>
+            <div class="channel">
+                <p class="channel-label">Book</p>
+                <h3>30 minutes, in the diary</h3>
+                <p>Pick a slot that works. Bring the problem rather than the brief. I will tell you if it is not something I should be doing.</p>
+                <a href="https://calendly.com/simon-j-taylor/30min" target="_blank" rel="noopener noreferrer"
+                    class="btn"
+                    onclick="gtag('event', 'generate_lead', {'currency': 'GBP', 'value': 0, 'lead_source': 'maven-webinar'});">
+                    Schedule a Call
+                </a>
+            </div>
+        </div>
+        </div>
+
+        <!-- FROM THE SESSION -->
+        <section>
+            <div class="container">
+                <p class="section-label">From the session</p>
+                <h2>Three things to take away.</h2>
+                <div class="body-copy">
+                    <p><strong>You're not behind.</strong> It's moving fast, and almost everyone is still working it out.</p>
+                    <p><strong>AI is the means, not the goal.</strong> Where it helps is different in every business, and finding that out is the first job.</p>
+                    <p><strong>Start small, but start somewhere.</strong> Your competitors will.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> SJT Digital</p>
+            <div class="footer-links">
+                <a href="/">For investors</a>
+                <a href="/ai-enablement">For portfolio companies</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const nav = document.getElementById('site-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+    </script>
+
+</body>
+
+</html>
